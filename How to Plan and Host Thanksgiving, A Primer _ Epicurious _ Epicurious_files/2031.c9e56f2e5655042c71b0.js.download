@@ -1,0 +1,984 @@
+(globalThis.webpackChunkverso=globalThis.webpackChunkverso||[]).push([[2031],{39252:function(e,t,n){var i=this&&this.__createBinding||(Object.create?function(e,t,n,i){void 0===i&&(i=n);var a=Object.getOwnPropertyDescriptor(t,n);a&&!("get"in a?!t.__esModule:a.writable||a.configurable)||(a={enumerable:!0,get:function(){return t[n]}}),Object.defineProperty(e,i,a)}:function(e,t,n,i){void 0===i&&(i=n),e[i]=t[n]}),a=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),o=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var n in e)"default"!==n&&Object.prototype.hasOwnProperty.call(e,n)&&i(t,e,n);return a(t,e),t},r=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0}),t.Commenting=void 0;const s=r(n(5556)),l=o(n(96540)),d=n(37243),c=n(67116),m=r(n(31850)),u=r(n(62282)),p=n(92807),g=r(n(52640)),y=n(16631),h=r(n(28433)),f=n(14307),w=n(92716),b=n(55030),v=r(n(86659)),R=r(n(19023)),C=r(n(24300)),I=r(n(76584)),M=r(n(64837)),x=r(n(92867)),N=n(22761),E=n(85554),L="ReviewListTitle",T="CommentingMainContent";t.Commenting=({brandName:e,commentCount:t,commentingUrl:n,communityExperience:{communityDefaultSort:i,enableCommunityExperience:a,enableMultipleComments:o,enableMultipleRatings:r,enableRatings:s,enableReplies:$,enableTags:S,enableUpvotes:k,hasHideCommunityFunctionalTag:U},communityUrl:A="/info/community-guidelines",defaultReplyLimit:F=1,hed:B,id:D,initialReviewLimit:_=7,messageContentHed:P,messageContentTrail:H,messageSubContent:q,organizationId:O,previousRating:W,ratingFormSignInURL:j,recaptchaSiteKey:G,replyLimit:Y=10,reviewerInfoText:K,reviewFormSignInURL:z,reviewLimit:V=10,reviewModalProps:Q,reviewNotesFormSignInURL:J,reviewNoteTags:X=[{active:!1,description:"Includes a tip",label:"Tip",slug:"TIP"},{active:!1,description:"Includes a question",label:"Question",slug:"QUESTION"}],reviewsCount:Z,reviewsSectionTitle:ee,shouldUserLoginToRate:te=!0,showFeedbackForm:ne=!0,showMessageBannerBookmark:ie,showRatingForm:ae,signInHed:oe,signInHedSpanTag:re,signInMessage:se,signUpMessageBannerText:le,submitFn:de,tenantID:ce,title:me,user:ue,usernameSignInDek:pe})=>{l.default.useEffect((()=>{(0,w.trackComponent)("Commenting")}),[]);const[ge,ye]=(0,l.useState)(),[he,fe]=(0,l.useState)(!1),[we,be]=(0,l.useState)(!1),[ve,Re]=(0,l.useState)(null),[Ce,Ie]=(0,l.useState)(!1);(0,E.useScrollToCommenting)(T);const Me=ue.isAuthenticated&&ue.amguuid&&O;(0,l.useEffect)((()=>{Me&&async function(){try{const e=await(0,c.checkUsername)(ue.amguuid,O,n);ye(e)}catch(e){throw console.warn(e),e}}()}),[Me,n,ue.amguuid,O]),(0,b.useViewportObserver)(`.${L}`,void 0,(e=>{if(e){const e={type:"impression",label:"Comments",subject:"community",features_list:[{name:"comments",total_index:t}]};(0,f.trackContentEngagementEvent)(e)}}),[t]);const{formatMessage:xe}=(0,d.useIntl)();if(U)return null;const Ne=e=>{ye(e)},Ee=e=>{Re(e),be(!0),setTimeout((()=>{be(!1)}),3e3)},Le=()=>{te&&!ue.isAuthenticated&&fe(!0)},Te=te?!he&&ne:ne;return l.default.createElement(l.default.Fragment,null,l.default.createElement(v.default.ContentWithAdRail,null,l.default.createElement("div",{className:T,"data-journey-hook":"page-footer"},l.default.createElement(l.default.Fragment,null,!a&&l.default.createElement(l.default.Fragment,null,ae&&l.default.createElement(g.default,{onClickHandler:Le,showExpandedBanner:he,ratingSubject:B,recaptchaSiteKey:G,shouldUserLoginToRate:te,submitFn:de,previousRating:W,isUserAuthenticated:ue.isAuthenticated,signInURL:j}),Te&&l.default.createElement(R.default,{onClickHandler:Le,recipeId:D,hed:B,userId:ue.isAuthenticated?ue.amguuid:null,recaptchaSiteKey:G,hasReviewFormSignIn:!te,signInURL:z,commentingUrl:n,organizationId:O,tenantID:ce})),l.default.createElement(l.default.Fragment,null,l.default.createElement(y.ReviewListTitleWrapper,{disableTopBorder:a||he},l.default.createElement(y.ReviewListTitle,{className:L},a?(0,E.formatReviewListTitle)(t,ee):(0,E.formatReviewListTitle)(Z,"Reviews","(0)")),l.default.createElement(y.ReviewListUtilityLink,{href:"#main-content"},xe(x.default.utilityLabel),l.default.createElement(y.ReviewListCarat,null))),a&&l.default.createElement(l.default.Fragment,null,ue.isAuthenticated&&l.default.createElement(M.default,{organizationId:O,userId:ue.amguuid,userApiUrl:n,showMessageBannerHandler:Ee}),Te&&l.default.createElement(I.default,{brandName:e,commentingUrl:n,contentId:D,handleUsernameChange:Ne,hasReviewNotesFormSignIn:!te,hed:B,organizationId:O,reviewerInfoText:K,reviewNoteTags:X,shouldEnableMultipleComments:o,shouldEnableMultipleRatings:r,shouldEnableRatings:s,shouldEnableTags:S,showMessageBannerHandler:Ee,showSavedRecipeNotes:e=>{Ie(e)},signInURL:J,signUpMessageBannerText:le,siteUserName:ge,tenantID:ce,userId:ue.isAuthenticated?ue.amguuid:null,usernameSignInDek:pe}),Ce&&l.default.createElement(N.CommentingMessageBanner,{contentAlign:"center",isFixed:!0,title:me??xe(x.default.MessageBannerTitle),showMessageBannerBookmark:ie},l.default.createElement("p",null,P??xe(x.default.MessageBannerContentHed),l.default.createElement("br",null),l.default.createElement("a",{href:A},xe(x.default.CommunityGuidelines))," ",H??xe(x.default.MessageBannerContentTrail)),l.default.createElement("p",null,q??xe(x.default.MessageBannerSubContent)))),l.default.createElement(C.default,{commentingUrl:n,defaultReplyLimit:F,entityId:D,hasCommunityExperienceEnabled:a,id:"reviews",initialReviewLimit:_,replyLimit:Y,reviewDefaultSort:i,reviewLimit:V,shouldEnableFromNowDate:a,showExpandedBanner:he,user:ue,usernameSignInDek:pe,signInHed:oe||xe(x.default.signInModalHed),signInHedSpanTag:re||xe(x.default.signInModalHedSpanTag,{brandName:e}),signInMessage:se||xe(x.default.signInModalMessage),reviewModalProps:Q||{hed:xe(x.default.replyDiscardModalHed)},reviewNoteTags:X,siteUserName:ge,handleUsernameChange:Ne,showMessageBannerHandler:Ee,shouldEnableReply:$,shouldEnableRatings:s,shouldEnableTags:S,shouldEnableUpvotes:k})))),ne&&l.default.createElement(h.default,null,l.default.createElement("aside",{"data-testid":"ReviewFeedbackAside"},l.default.createElement(p.PaymentGateway,{group:"ads"},l.default.createElement(m.default,{position:"rail"}))))),we&&l.default.createElement(u.default,{contentAlign:"center",isFixed:!0,position:"top-centre",shouldShowCloseButton:!0,isDisclaimer:!0,delayDuration:3e3},l.default.createElement("p",null,ve)))},t.Commenting.propTypes={brandName:s.default.string,commentCount:s.default.number,commentingUrl:s.default.string.isRequired,communityExperience:s.default.shape({communityDefaultSort:s.default.shape({commentsOrderBy:s.default.string,repliesOrderBy:s.default.string}),enableCommunityExperience:s.default.bool,enableMultipleComments:s.default.bool,enableMultipleRatings:s.default.bool,enableRatings:s.default.bool,enableReplies:s.default.bool,enableTags:s.default.bool,enableUpvotes:s.default.bool,hasHideCommunityFunctionalTag:s.default.bool}),communityUrl:s.default.string,defaultReplyLimit:s.default.number,hed:s.default.string.isRequired,id:s.default.string.isRequired,initialReviewLimit:s.default.number,messageContentHed:s.default.string,messageContentTrail:s.default.string,messageSubContent:s.default.string,organizationId:s.default.string.isRequired,previousRating:s.default.number,ratingFormSignInURL:s.default.string,recaptchaSiteKey:s.default.string.isRequired,replyLimit:s.default.number,reviewerInfoText:s.default.string,reviewFormSignInURL:s.default.string.isRequired,reviewLimit:s.default.number,reviewModalProps:s.default.object,reviewNotesFormSignInURL:s.default.string,reviewNoteTags:s.default.arrayOf(s.default.shape({active:s.default.bool,description:s.default.string,label:s.default.string,slug:s.default.string})),reviewsCount:s.default.number,reviewsSectionTitle:s.default.string,shouldUserLoginToRate:s.default.bool,showFeedbackForm:s.default.bool,showMessageBannerBookmark:s.default.bool,showRatingForm:s.default.bool,signInHed:s.default.string,signInHedSpanTag:s.default.string,signInMessage:s.default.string,signUpMessageBannerText:s.default.string,submitFn:s.default.func,tenantID:s.default.string.isRequired,title:s.default.string,user:s.default.shape({isAuthenticated:s.default.bool.isRequired,amguuid:s.default.string}).isRequired,usernameSignInDek:s.default.string}},24300:(e,t,n)=>{const i=n(96540),a=n(5556),{connect:o}=n(67851),{useState:r,useEffect:s,useCallback:l}=n(96540),{useIntl:d}=n(37243),{commentingAction:c}=n(85554),m=n(47125),{formatReviewListItems:u}=n(39311),{getComments:p,requestGraphService:g}=n(60711),{createCommentReaction:y,removeCommentReaction:h}=n(22914),f=n(22509),w=n(12311),{default:b}=n(92867),{Circle:v}=n(62930),{ReviewListLoaderWrapper:R}=n(22761),{useFetchComments:C}=n(85554),I="removeCommentReaction",M="createCommentReaction",x=({commentingUrl:e,defaultReplyLimit:t,id:n,initialReviewLimit:a,hasCommunityExperienceEnabled:o,entityId:x,reviewDefaultSort:N,reviewLimit:E,replyLimit:L,shouldEnableFromNowDate:T,shouldEnableReply:$,shouldEnableTags:S,showMessageBannerHandler:k,usernameSignInDek:U,signInHed:A,signInHedSpanTag:F,signInMessage:B,reviewModalProps:D,reviewNoteTags:_,user:P,setCommentCount:H,siteUserName:q,handleUsernameChange:O,...W})=>{const{formatMessage:j}=d(),[G,Y]=r(),[K,z]=r(!1),[V,Q]=r(),[J,X]=r(null),[Z,ee]=r(!1),te=T||!1,[ne,ie]=r([]),[ae,oe]=r({}),{isLoading:re,reviews:se,page:le}=C({commentingUrl:e,defaultReplyLimit:t,entityId:x,initialReviewLimit:a,reviewDefaultSort:N,setCommentCount:H});s((()=>{const e=u(se,j,_,te);ie(e),ee(le.hasNextPage??!1)}),[se,le,te,j,_]),s((()=>{oe((e=>ne.reduce(((e,t)=>(e[t.commentId]||(e[t.commentId]={reactionCount:t.reactionCount,viewerActionPresence:t.viewerActionPresence}),t.replies&&t.replies.length>0&&t.replies.forEach((t=>{e[t.id]||(e[t.id]={reactionCount:t?.actionCounts?.reaction?.total,viewerActionPresence:t?.viewerActionPresence?.reaction})})),e)),{...e})))}),[ne]);const de=l((async({item:t,operation:n})=>{const{commentId:i,revisionId:a}=t,o=ae[i]?.viewerActionPresence,r=n||(o?I:M);if(P&&P.isAuthenticated){oe((e=>({...e,[i]:{reactionCount:e[i].viewerActionPresence?--e[i].reactionCount:++e[i].reactionCount,viewerActionPresence:!e[i].viewerActionPresence}})));const t={operationName:r,query:r===M?y:h,variables:{input:{commentID:i,commentRevisionID:a,clientMutationId:"0"}}};try{await g(e,t)}catch(e){oe((e=>({...e,[i]:{reactionCount:e[i].viewerActionPresence?--e[i].reactionCount:++e[i].reactionCount,viewerActionPresence:!e[i].viewerActionPresence}})));const t=r===M?b.likeActionErrorMessage:b.unlikeActionErrorMessage;k(j(t)),console.warn(e)}}else{const e="COMMUNITY_LIKE_CLICK_NOTE",t={type:"login",source_type:e},n=`${document.location.pathname}#${c.LIKE_COMMENT}`;f.doDisplayModal({dangerousHed:A,dangerousHedSpanTag:F,dangerousDek:B,redirectURL:n,analyticsType:"comment reaction",shouldHideIllustration:!0,source:e,snowplowData:t})}}),[P,ae,e,A,F,B,j,k]);s((()=>{if(window.document&&window.document.location){const e=w.parseQueryParams(window.location.search);e.action&&(e.action===M||e.action===I)&&e.commentId&&e.commentRevisionId&&P.isAuthenticated&&(de({item:{commentId:e.commentId,revisionId:e.commentRevisionId},operation:e.action}),window.history.replaceState({},document.title,document.location.pathname+document.location.hash))}}),[P.isAuthenticated,de]),s((()=>{Y(Z?"Show More Notes":void 0)}),[Z,Y]);const ce=Z?{onClick:async()=>{z(!0),Q();const t=J??le.endCursor;try{const{reviews:n,page:{endCursor:i,hasNextPage:a}}=await p({entityId:x,after:t,commentingUrl:e,logger:console,defaultSort:N,reviewLimit:E});X(i),ee(a);const o=u(n,j,_,te);ie([...ne,...o])}catch(e){Q(new Error(e))}z(!1)},label:G}:null;return re?i.createElement(R,null,i.createElement(v,null)):ne.length||V?i.createElement(m,{hasCommunityExperienceEnabled:o,items:ne,id:n,commentingUrl:e,cta:ce,isLoading:K,hasErrored:!!V,user:P,reviewModalProps:D,...W,commentReactionHandler:de,userReactions:ae,updateUserReactions:e=>{oe((t=>e.reduce(((e,t)=>(e[t.id]||(e[t.id]={reactionCount:t?.actionCounts?.reaction?.total,viewerActionPresence:t?.viewerActionPresence?.reaction}),e)),{...t})))},usernameSignInDek:U,signInHed:A,signInHedSpanTag:F,signInMessage:B,showMessageBannerHandler:k,shouldEnableReply:$,replyLimit:L,siteUserName:q,handleUsernameChange:O,shouldEnableTags:S}):null};x.propTypes={commentingUrl:a.string.isRequired,defaultReplyLimit:a.number,entityId:a.string.isRequired,handleUsernameChange:a.func,hasCommunityExperienceEnabled:a.bool,id:a.string,initialReviewLimit:a.number,replyLimit:a.number,reviewDefaultSort:a.shape({commentsOrderBy:a.string,repliesOrderBy:a.string}),reviewLimit:a.number,reviewModalProps:a.object,reviewNoteTags:a.array,setCommentCount:a.func.isRequired,shouldEnableFromNowDate:a.bool,shouldEnableReply:a.bool,shouldEnableTags:a.bool,showMessageBannerHandler:a.func,signInHed:a.string,signInHedSpanTag:a.string,signInMessage:a.string,siteUserName:a.string,user:a.shape({isAuthenticated:a.bool.isRequired,amguuid:a.string}).isRequired,usernameSignInDek:a.string},e.exports=o(null,{setCommentCount:e=>({type:"SET_KEY",key:"comments.commentCount",value:e})})(x)},81063:(e,t,n)=>{Object.defineProperty(t,"__esModule",{value:!0}),t.Commenting=void 0;const i=n(12892),a=n(57744),o=n(39252),r=(0,a.connector)(o.Commenting,{keysToPluck:["communityExperience","brandName","user"],keysToSpread:["commentAttributes","comments","recaptcha"]}),s=(0,i.asConfiguredComponent)(r,"Commenting");t.Commenting=s},22761:(e,t,n)=>{const i=n(75999).default,a=n(62282),{MessageBannerContent:o,MessageBannerTitle:r}=n(8070),{getColorToken:s,getTypographyStyles:l,maxScreen:d}=n(26865),{BREAKPOINTS:c}=n(96472),m=i(a).withConfig({displayName:"CommentingPageMessageBanner"})`
+  margin-top: 40px;
+  margin-bottom: 32px;
+
+  ${d(c.md)} {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding: 16px 0;
+  }
+
+  ${r} {
+    color: ${s("colors.consumption.lead.standard.heading")};
+  }
+  ${o} {
+    ${l("typography.definitions.utility.assistive-text")}
+  }
+`,u=i.div.withConfig({displayName:"ReviewListLoaderWrapper"})`
+  display: flex;
+  justify-content: center;
+`;e.exports={CommentingMessageBanner:m,ReviewListLoaderWrapper:u}},92867:(e,t,n)=>{Object.defineProperty(t,"__esModule",{value:!0});const i=n(37243);t.default=(0,i.defineMessages)({utilityLabel:{id:"ReviewListContainer.UtilityLabel",defaultMessage:"Back to Top",description:"Utility label for review list container"},MessageBannerTitle:{id:"Commenting.MessageBannerTitle",defaultMessage:"Note submitted",description:"Text for the MessageBanner title",isConfigurable:!0},MessageBannerContentHed:{id:"Commenting.MessageBannerContentHed",defaultMessage:"Comments are moderated in line with our",description:"Text for the MessageBanner body",isConfigurable:!0},CommunityGuidelines:{id:"Commenting.CommunityGuidelines",defaultMessage:"Community Guidelines",description:"Text for the community guidelines link",isConfigurable:!0},MessageBannerContentTrail:{id:"Commenting.MessageBannerContentTrail",defaultMessage:"before being added.",description:"Text for the MessageBanner body",isConfigurable:!0},MessageBannerSubContent:{id:"Commenting.MessageBannerSubContent",defaultMessage:"Thanks for contributing to this space.",description:"Text for the MessageBanner sub content",isConfigurable:!0},likeActionErrorMessage:{id:"Commenting.LikeActionErrorMessage",defaultMessage:"Unable to like this note. Please try again.",description:"Error message to display while like action fails"},unlikeActionErrorMessage:{id:"Commenting.UnlikeActionErrorMessage",defaultMessage:"Unable to unlike this note. Please try again.",description:"Error message to display while unlike action fails"},signInModalHed:{id:"Commenting.signInModalHed",defaultMessage:"Sign in to join the",description:"Hed for commenting sign in modal"},signInModalHedSpanTag:{id:"Commenting.signInModalHedSpanTag",defaultMessage:"{brandName} community",description:"Hed span for commenting sign in modal"},signInModalMessage:{id:"Commenting.signInModalMessage",defaultMessage:"Once you're signed in, add your comments and like or reply to others.",description:"Message for commenting sign in modal"},replyDiscardModalHed:{id:"Commenting.replyDiscardModalHed",defaultMessage:"Discard this reply?",description:"Hed for discard reply modal"}})},85554:(e,t,n)=>{Object.defineProperty(t,"__esModule",{value:!0}),t.useScrollToCommenting=t.commentingAction=t.useFetchComments=t.formatReviewListTitle=void 0;const i=n(96540),a=n(60711),o=n(759);t.formatReviewListTitle=(e,t,n="")=>{const i=t||"Comments";return e||n?`${i}${e&&e>0?` (${e})`:` ${n}`}`:i},t.useFetchComments=({commentingUrl:e,defaultReplyLimit:t,entityId:n,initialReviewLimit:o,reviewDefaultSort:r,setCommentCount:s})=>{const[l,d]=(0,i.useState)(!0),[c,m]=(0,i.useState)([]),[u,p]=(0,i.useState)({hasNextPage:!1,endCursor:""});return(0,i.useEffect)((()=>{!async function(){try{const i=await(0,a.getDataReviews)({commentingUrl:e,defaultSort:r,entityId:n,logger:console,replyLimit:t,reviewLimit:o});i?.reviews&&i.page&&(m(i.reviews),p(i.page),s(i.storyCommentsCount))}catch(e){console.error("Failed to fetch reviews:",e)}d(!1)}()}),[e,r,n,t,o,s,d,p,m]),{isLoading:l,reviews:c,page:u}},t.commentingAction={LEAVE_RATING:"leave-a-rating",LEAVE_REPLY:"leave-a-reply",LIKE_COMMENT:"like-a-comment",LIKE_REPLY:"like-a-reply",REPLY_TO_REPLY:"reply-to-reply"},t.useScrollToCommenting=e=>{(0,i.useEffect)((()=>{if(!e)return;const{hash:n}=window.location;n&&Object.values(t.commentingAction).some((e=>n.includes(e)))&&((0,o.scrollToAnchor)(`.${e}`),window.history.replaceState(null,"",document.location.pathname))}),[e])}},69389:(e,t,n)=>{const{asConfiguredComponent:i}=n(12892),{asThemedComponent:a}=n(20223),o=n(39416);e.exports=a(i(o,"ContentHeader"))},45771:(e,t,n)=>{const i=n(5556),a=n(96540),{useIntl:o}=n(37243),r=n(76399),s=n(96616).A,{asConfiguredComponent:l}=n(12892),{trackComponent:d}=n(92716),{interactionResponse:c}=n(56187),{ReviewNoteModalBaseWrapper:m,ReviewNoteModalCloseButton:u,ReviewNoteModalContinueButton:p,ReviewNoteDiscardSection:g,ReviewNoteModalDek:y,ReviewNoteModalHed:h}=n(49038),f=({className:e,modalProps:{hed:t,dek:n,continueLabel:i,discardLabel:l}={},confirmButtonCallback:f,onClose:w,isVisible:b=!1})=>{a.useEffect((()=>{(async()=>{await c(),d("ReviewNoteSubmitModal")})()}),[]);const v=()=>{w()},{formatMessage:R}=o();return a.createElement(m,{className:e,closeTimeoutMS:200,isOpen:b},a.createElement(u,{isIconButton:!0,ariaLabel:R(s.closeButtonAriaLabel),label:R(s.closeButtonLabel),onClickHandler:v,role:"button",ButtonIcon:r}),a.createElement(h,null,t||R(s.hed)),a.createElement(y,null,n||R(s.dek)),a.createElement(p,{label:i||R(s.continueLabel),onClickHandler:v}),a.createElement(g,{onClickHandler:f,label:l||R(s.discardLabel),btnStyle:"text",inputKind:"link"}))};f.propTypes={className:i.string,confirmButtonCallback:i.func,isVisible:i.bool,modalProps:i.object,onClose:i.func},f.displayName="ReviewNoteModal",e.exports=l(f,"ReviewNoteModal")},49038:(e,t,n)=>{const i=n(96540),a=n(20312),o=n(5556),{default:r}=n(75999),{BaseText:s}=n(76955),{calculateSpacing:l}=n(26865),{BREAKPOINTS:d,ZINDEX_MAP:c}=n(96472),m=n(73730),{ButtonLabel:u}=n(18974),{getColorToken:p,getTypographyStyles:g}=n(26865),y=r(s).withConfig({displayName:"ReviewNoteModalHed"})`
+  margin-top: ${l(0)};
+  padding: ${l(2.5)} ${l(1.25)};
+  text-align: center;
+`;y.defaultProps={as:"div",colorToken:"colors.interactive.base.brand-primary",topSpacing:1,typeIdentity:"typography.definitions.consumptionEditorial.display-large"};const h=r.p.withConfig({displayName:"ReviewNoteModalDek"})`
+  ${g("typography.definitions.consumptionEditorial.body-core")}
+  margin-top: ${l(0)};
+  margin-bottom: ${l(5)};
+  text-align: center;
+  color: ${p("colors.consumption.body.standard.body")};
+  @media (max-width: ${d.md}) {
+    margin-bottom: ${l(5)};
+  }
+`,f=r(m.Utility).withConfig({displayName:"ReviewNoteModalButtonPrimary"})`
+  position: absolute;
+  top: ${l(1)};
+  right: ${l(1)};
+  padding: 0;
+  fill: ${p("colors.interactive.base.black")};
+
+  .icon-close {
+    padding: 6px;
+  }
+
+  &,
+  &:focus,
+  &:hover {
+    border: 0;
+    background-color: transparent;
+  }
+  width: 42px;
+  height: 42px;
+`,w=r(m.Primary).withConfig({displayName:"ReviewNoteModalContinueButton"})`
+  display: flex;
+  justify-content: center;
+  margin-bottom: ${l(1)};
+  padding: ${l(2)} ${l(0)};
+  width: 100%;
+  ${u} {
+    padding: 0 ${l(2.5)};
+  }
+`,b=r(m.Primary).withConfig({displayName:"ReviewNoteDiscardSection"})`
+  display: flex;
+  justify-content: center;
+  padding: 17px ${l(0)};
+  width: 100%;
+  text-decoration: underline;
+  ${u} {
+    padding: 0 ${l(2.5)};
+  }
+`;function v({className:e,...t}){const n=`${e}__content`,o=`${e}__overlay`;return i.createElement(a,{portalClassName:e,className:n,overlayClassName:o,...t})}v.propTypes={className:o.string};const R=r(v).withConfig({displayName:"ReviewNoteModalBaseWrapper"})`
+  &__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: ${c.interstitialLayer};
+
+    background-color: rgba(
+      ${p("colors.background.black",{rgbOnly:!0})},
+      0
+    );
+
+    &.ReactModal__Overlay--after-open {
+      transition: background-color 500ms;
+      opacity: 1;
+      background-color: rgba(
+        ${p("colors.background.black",{rgbOnly:!0})},
+        0.4
+      );
+    }
+
+    &.ReactModal__Overlay--after-close {
+      transition: background-color 500ms;
+      background-color: rgba(
+        ${p("colors.background.black",{rgbOnly:!0})},
+        0
+      );
+    }
+  }
+
+  &__content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    border-radius: ${l(1)};
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
+    background-color: ${p("colors.background.white")};
+    padding: ${l(6)} ${l(5)}
+      ${l(5)} ${l(5)};
+    width: ${l(57)};
+    height: 368px;
+    overflow-y: auto;
+    @media (max-width: ${d.md}) {
+      transform: translateY(-50%)
+        translateX(calc(-50% - ${l(2,"px")}));
+
+      margin: 0 ${l(2,"px")};
+      padding: ${l(4)} ${l(5)}
+        ${l(4)} ${l(5)};
+      width: auto;
+      min-width: ${l(38)};
+      max-width: ${l(60)};
+    }
+  }
+`;e.exports={ReviewNoteModalBaseWrapper:R,ReviewNoteModalCloseButton:f,ReviewNoteModalContinueButton:w,ReviewNoteDiscardSection:b,ReviewNoteModalDek:h,ReviewNoteModalHed:y}},96616:(e,t,n)=>{const i=n(37243);t.A=(0,i.defineMessages)({closeButtonAriaLabel:{id:"ReviewNoteModal.CloseButtonAriaLabel",defaultMessage:"Close ReviewNoteModal Modal",description:"ReviewNoteModal component close button aria label"},closeButtonLabel:{id:"ReviewNoteModal.CloseButtonLabel",defaultMessage:"close modal button label",description:"ReviewNoteModal component close button label"},continueLabel:{id:"ReviewNoteModal.continueLabel",defaultMessage:"No, still writing",description:"ReviewNoteModal component continue button text",isConfigurable:!0},dek:{id:"ReviewNoteModal.dek",defaultMessage:"Everything you've written will be lost",description:"ReviewNoteModal component dek text",isConfigurable:!0},discardLabel:{id:"ReviewNoteModal.discardLabel",defaultMessage:"Yes, discard it",description:"ReviewNoteModal discard button text",isConfigurable:!0},hed:{id:"ReviewNoteModal.Hed",defaultMessage:"Discard this comment?",description:"ReviewNoteModal component hed text",isConfigurable:!0}})},56425:(e,t,n)=>{const i=n(96540),{useState:a,useEffect:o}=n(96540),r=n(5556),s=n(45565),{addReview:l}=n(60711),{trackContentEngagementEvent:d}=n(14307),c=({brandName:e,commentingUrl:t,contentId:n,handleUsernameChange:r,hasReviewNotesFormSignIn:c,hed:m,organizationId:u,reviewerInfoText:p,reviewNoteTags:g,shouldEnableMultipleComments:y,shouldEnableMultipleRatings:h,shouldEnableRatings:f,shouldEnableTags:w,showMessageBannerHandler:b,showSavedRecipeNotes:v,signInURL:R,signUpMessageBannerText:C,siteUserName:I,tenantID:M,userId:x,usernameSignInDek:N})=>{const[E,L]=a("");o((()=>{const e=window.location.origin+window.location.pathname;L(e)}),[]);const T=(e,t,n)=>{{const i={type:"submit",label:"add note",rating:t,subject:"community_comment",features_list:n};e&&(i.error=e),d(i,{skipDuplicateEvent:!1})}};return i.createElement(s,{brandName:e,handleUsernameChange:r,hasReviewNotesFormSignIn:c,onSubmitHandler:async e=>{let i,a;const o={hed:m,storyLink:E},{reviewNote:r,rating:s,userId:d,toggleChip:c}=e||{},p=c?.reduce(((e,t)=>(t.slug&&t.active&&e.push(t.slug),e)),[]),g=p?.map((e=>({name:e.toLowerCase(),index:0,total_index:1}))),f={review:{storyID:n,siteID:u,body:r,meta:JSON.stringify(o),rating:s,ratingScale:5,reviewTags:p,tenantID:M},clientMutationId:"0",enableMultipleRatings:h,enableMultipleComments:y},w=d;try{i=await l(f,w,t,console),T(null,s,g)}catch(e){a=e.message||"",T(a,s,g),console.warn(e)}return i},reviewerInfoText:p,reviewNoteTags:g,shouldEnableRatings:f,shouldEnableTags:w,showMessageBannerHandler:b,showSavedRecipeNotes:v,signInURL:R,signUpMessageBannerText:C,siteUserName:I,userId:x,usernameSignInDek:N})};c.propTypes={brandName:r.string,commentingUrl:r.string,contentId:r.string,handleUsernameChange:r.func.isRequired,hasReviewNotesFormSignIn:r.bool,hed:r.string,organizationId:r.string,reviewerInfoText:r.string,reviewNoteTags:r.array,shouldEnableMultipleComments:r.bool,shouldEnableMultipleRatings:r.bool,shouldEnableRatings:r.bool,shouldEnableTags:r.bool,showMessageBannerHandler:r.func,showSavedRecipeNotes:r.func.isRequired,signInURL:r.string,signUpMessageBannerText:r.string,siteUserName:r.string,tenantID:r.string,userId:r.string,usernameSignInDek:r.string},e.exports=c},76584:(e,t,n)=>{e.exports=n(56425)},30488:(e,t,n)=>{const i=n(5556),a=n(96540),{useState:o}=n(96540),{connect:r}=n(67851),{useIntl:s}=n(37243),l=n(62097).A,{createNewUsername:d,validate:c}=n(67116),m=n(76399),{asConfiguredComponent:u}=n(12892),{trackComponent:p}=n(92716),{interactionResponse:g}=n(56187),{trackUserAccountEvent:y}=n(14307),{doCloseModal:h}=n(61057),{UserNameModalBaseWrapper:f,UserNameModalCloseButton:w,UserNameModalButtons:b,UserNameModalDek:v,UserNameModalHed:R,UserNameModalSubmit:C,UserNameModalTextFieldWrapper:I}=n(94823),M=({className:e,dangerousDek:t,dangerousHed:n,isVisible:i=!1,maxLength:r=23,minLength:u=2,organizationId:M,showMessageBannerHandler:x,submitButtonLabel:N,successCallback:E,userApiUrl:L,userId:T,source:$})=>{a.useEffect((()=>{(async()=>{await g(),p("UserNameModal")})()}),[]);const{formatMessage:S}=s(),[k,U]=o(""),[A,F]=o(""),B={lengthError:S(l.lengthError),specialCharError:S(l.specialCharError)};return a.createElement(f,{className:e,isOpen:i},a.createElement(w,{isIconButton:!0,ariaLabel:S(l.closeButtonLabel),label:S(l.closeButtonLabel),role:"button",onClickHandler:()=>{h(),y({type:"exit",subject:"username_modal",source_type:$}),U(null)},ButtonIcon:m}),a.createElement(R,null,n||S(l.hed)),a.createElement(v,{dangerouslySetInnerHTML:{__html:t||S(l.dek)}}),a.createElement(I,{className:"user-name-modal",hasAutoFocus:!0,shouldUseUppercase:!0,name:"username",placeholder:"YOUR_USERNAME",type:"text",onInputChange:e=>{let{value:t}=e.target;t.length>r&&(t=t.slice(0,r),e.target.value=t),F(t)},errorText:k,isInvalid:!!k,formName:"username",errorPosition:"belowTextField",hideLabel:!0,label:S(l.hed),assistiveSubtext:S(l.userNameModalAssistiveText)}),a.createElement(b,null,a.createElement(C,{label:N||S(l.submitButtonLabel),inputKind:"submit","data-testid":"UserNameModalSubmit",onClickHandler:async()=>{let e;const t=c(A,{minLength:u,maxLength:r});if(t)return void U(B[t]??"");let n;try{n=await d({name:A,organizationId:M,userId:T,url:L},console),F(n),U(null),x&&x(S(l.successMessage)),h(),E&&E(n)}catch(t){"already_taken"===t?.message?(U(S(l.alreadyTakenError)),e=t?.message):(x&&x(S(l.errorMessage)),h(),e=l.errorMessage.defaultMessage)}y({type:"submit",label:"SAVE USERNAME",subject:"username_modal",source_type:$,error:e})}})))};M.propTypes={className:i.string,dangerousDek:i.string,dangerousHed:i.string,isVisible:i.bool,maxLength:i.number,minLength:i.number,organizationId:i.string.isRequired,showMessageBannerHandler:i.func,source:i.string,submitButtonLabel:i.string,successCallback:i.func,userApiUrl:i.string.isRequired,userId:i.string.isRequired};const x=u(M,"UserNameModal");e.exports=r((e=>{const{userNameModalConfig:t}=e;return{...t}}))(x)},64837:(e,t,n)=>{e.exports=n(30488)},94823:(e,t,n)=>{const i=n(96540),a=n(20312),o=n(5556),{default:r}=n(75999),{BaseText:s}=n(76955),{calculateSpacing:l,getColorStyles:d}=n(26865),{ZINDEX_MAP:c,BREAKPOINTS:m}=n(96472),u=n(73730),{getColorToken:p,getTypographyStyles:g}=n(26865),y=n(89662),{TextFieldControlInput:h}=n(60434),f=r(s).withConfig({displayName:"UserNameModalHed"})`
+  padding-top: ${l(2.5)};
+  padding-bottom: ${l(2.5)};
+  text-align: center;
+`;f.defaultProps={as:"div",colorToken:"colors.interactive.base.brand-primary",topSpacing:1,typeIdentity:"typography.definitions.consumptionEditorial.display-large"};const w=r.p.withConfig({displayName:"UserNameModalDek"})`
+  ${g("typography.definitions.consumptionEditorial.body-core")}
+  margin: 0;
+  text-align: center;
+  color: ${p("colors.consumption.body.standard.body")};
+`,b=r(u.Utility).withConfig({displayName:"UserNameModalCloseButton"})`
+  position: absolute;
+  top: ${l(1)};
+  right: ${l(1)};
+  padding: 0;
+  fill: ${p("colors.discovery.body.light.context-tertiary")};
+
+  .icon-close {
+    padding: 8px;
+  }
+
+  &,
+  &:focus,
+  &:hover {
+    border: 0;
+    background-color: transparent;
+  }
+`,v=r(u.Primary).withConfig({displayName:"UserNameModalSubmit"})`
+  margin-top: 0;
+  padding: 0;
+`,R=r.div.withConfig({displayName:"UserNameModalButtons"})`
+  display: flex;
+  justify-content: center;
+  margin-top: ${l(4)};
+  @media (max-width: ${m.md}) {
+    margin-top: ${l(3)};
+  }
+  width: 100%;
+
+  ${v} {
+    padding: 0;
+    width: 100%;
+  }
+`;function C({className:e,...t}){const n=`${e}__content`,o=`${e}__overlay`;return i.createElement(a,{portalClassName:e,className:n,overlayClassName:o,...t})}C.propTypes={className:o.string};const I=r(C).withConfig({displayName:"UserNameModalBaseWrapper"})`
+  &__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: ${c.interstitialLayer};
+
+    background-color: rgba(
+      ${p("colors.background.black",{rgbOnly:!0})},
+      0
+    );
+
+    &.ReactModal__Overlay--after-open {
+      transition: background-color 750ms;
+      opacity: 1;
+      background-color: rgba(
+        ${p("colors.background.black",{rgbOnly:!0})},
+        0.4
+      );
+    }
+
+    &.ReactModal__Overlay--after-close {
+      transition: background-color 750ms;
+      background-color: rgba(
+        ${p("colors.background.black",{rgbOnly:!0})},
+        0
+      );
+    }
+  }
+
+  &__content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    border-radius: 8px;
+    background-color: ${p("colors.background.white")};
+    padding-top: ${l(12)};
+    padding-right: ${l(6)};
+    padding-bottom: ${l(7)};
+    padding-left: ${l(6)};
+    width: ${l(57)};
+    min-height: ${l(62)};
+    overflow-y: auto;
+    @media (max-width: ${m.md}) {
+      width: 90%;
+    }
+  }
+`,M=r(y.SingleLine).withConfig({displayName:"UserNameModalTextFieldWrapper"})`
+  ${h} {
+    margin-top: ${l(6)};
+    ${g("typography.definitions.globalEditorial.accreditation-feature")};
+    ${d("color","colors.interactive.base.body")};
+    @media (max-width: ${m.md}) {
+      margin-top: ${l(4)};
+    }
+  }
+`;e.exports={UserNameModalBaseWrapper:I,UserNameModalButtons:R,UserNameModalCloseButton:b,UserNameModalDek:w,UserNameModalHed:f,UserNameModalSubmit:v,UserNameModalTextFieldWrapper:M}},62097:(e,t,n)=>{const i=n(37243);t.A=(0,i.defineMessages)({hed:{id:"UserNameModal.Hed",defaultMessage:"Create Username",description:"UserNameModal component hed text"},dek:{id:"UserNameModal.Dek",defaultMessage:"Your username will appear next to any comments and replies you add.",description:"UserNameModal component description text"},submitButtonLabel:{id:"UserNameModal.SubmitButtonLabel",defaultMessage:"Save Username",description:"UserNameModal component submit button label"},closeButtonLabel:{id:"UserNameModal.CloseButtonLabel",defaultMessage:"Close User Name",description:"UserNameModal component close button label"},lengthError:{id:"UserNameModal.lengthError",defaultMessage:"Usernames must be between 2 and 23 characters.",description:"UserNameModal component length error"},specialCharError:{id:"UserNameModal.specialCharError",defaultMessage:"Usernames can only include letters, numbers and underscores (_).",description:"UserNameModal component special chars validation error"},alreadyTakenError:{id:"UserNameModal.alreadyTakenError",defaultMessage:"This Username is already taken.",description:"UserName already taken error"},userNameModalAssistiveText:{id:"UserNameModal.UserNameModalAssistiveText",defaultMessage:"Usernames must be between 2 and 23 characters and can only include letters, numbers and underscores (_).",description:"UserNameModal Assistive Text"},errorMessage:{id:"UserNameModal.ErrorMessage",defaultMessage:"Unable to save username. Please try again.",description:"UserNameModal default error message"},successMessage:{id:"UserNameModal.SuccessMessage",defaultMessage:"Your username is saved.",description:"UserNameModal success message"}})},70209:(e,t,n)=>{const i=n(5556),a=n(96540),{useState:o,useEffect:r,useRef:s}=n(96540),{useIntl:l}=n(37243),d=n(39374).A,{trackComponent:c}=n(92716),{interactionResponse:m}=n(56187),{Wrapper:u,SignInInfo:p,FormText:g,FormWrapper:y,ErrorText:h,RatingFormRating:f,ReCaptcha:w,SubmitRatingWrapper:b}=n(6276),v=({isUserAuthenticated:e,promptText:t,ratingSubject:n,loadingText:i,errorText:v="Sorry, that didn't go through. Please try again later.",onClickHandler:R=(()=>{}),successText:C,previousRatingText:I,submitFn:M,previousRating:x,recaptchaSiteKey:N,showExpandedBanner:E,shouldUserLoginToRate:L,dangerousSignIn:T="",dangerousSignInExpanded:$="",signInURL:S})=>{a.useEffect((()=>{(async()=>{await m(),c("RatingForm")})()}),[]);const[k,U]=o(!1),[A,F]=o(),[B,D]=o(!1),[_,P]=o(!1),[H,q]=o(),{formatMessage:O}=l(),W=s();if(r((()=>{x&&(F(x),P(!0))}),[x]),r((()=>{D(e)}),[e]),r((()=>{E&&W?.current?.scrollIntoView({block:"center",inline:"center"})}),[W,E]),H)return a.createElement(u,null,a.createElement(h,null,v));const j=L&&!B;return a.createElement(u,{"data-testid":"RatingForm",disableTopPadding:j,ref:W,showExpandedBanner:E,disableTopBorder:j},j&&a.createElement(p,{expanded:E,dangerouslySetInnerHTML:{__html:E?$.replace("{signinLink}",S):T.replace("{signinLink}",S)}}),a.createElement(y,{onClick:R},!E&&a.createElement(g,{isTextDisabled:j,dangerouslySetInnerHTML:{__html:(()=>{let e;return e=L&&!B?t||O(d.promptText,{RATING_SUBJECT:n}):_&&x?I||O(d.previousRatingText,{RATING_SUBJECT:n}):_?C||O(d.successText):k?i||O(d.loadingText):t||O(d.promptText,{RATING_SUBJECT:n}),e.replace(/{RATING_SUBJECT}/g,n)})()}}),!E&&a.createElement(f,{averageRatingCount:L?B&&A:A,isRatingDisabled:_||j,onChange:e=>{F(e),window.dataLayer?.push({event:"ratings-stars-attempt"})}}),L&&(B?!_:!E)&&a.createElement(b,{onClickHandler:async()=>{U(!0);try{await M("recaptcha-response",A,!1),P(!0),window.dataLayer?.push({event:"ratings-stars-success"})}catch(e){q(e)}finally{U(!1)}},inputKind:"submit",label:"SUBMIT RATING",isDisabled:!B||!A}),!L&&!!A&&!_&&a.createElement(w,{recaptchaSiteKey:N,widgetId:"rating",recaptchaSize:"normal",recaptchaCallback:async e=>{U(!0);try{await M(e,A),U(!1),P(!0),window.dataLayer?.push({event:"ratings-stars-success"})}catch(e){q(e)}}})))};v.propTypes={dangerousSignIn:i.string,dangerousSignInExpanded:i.string,errorText:i.string,isUserAuthenticated:i.bool,loadingText:i.string,onClickHandler:i.func,previousRating:i.number,previousRatingText:i.string,promptText:i.string,ratingSubject:i.string,recaptchaSiteKey:i.string,shouldUserLoginToRate:i.bool,showExpandedBanner:i.bool,signInURL:i.string,submitFn:i.func,successText:i.string},e.exports=v},52640:(e,t,n)=>{const{asConfiguredComponent:i}=n(12892),a=n(70209);e.exports=i(a,"RatingForm")},6276:(e,t,n)=>{const i=n(75999).default,{BaseText:a}=n(76955),{calculateSpacing:o,getColorStyles:r,getColorToken:s,getTypographyStyles:l,minScreen:d,maxScreen:c}=n(26865),{BREAKPOINTS:m}=n(96472),u=n(62340),{RatingStar:p}=n(97927),g=n(6605),{applyGridSpacing:y}=n(1123),h=n(73730),f=i.div.withConfig({displayName:"Wrapper"})`
+  margin-bottom: ${o(4)};
+  border-width: 2px 0;
+  border-style: solid;
+  padding-bottom: ${o(2)};
+  text-align: center;
+
+  ${({theme:e})=>r(e,"border-color","colors.consumption.body.standard.divider")};
+  ${({disableTopPadding:e})=>!e&&`padding-top: ${o(4)};`}
+  ${({disableTopBorder:e})=>e&&"border-top: none;"}
+  ${({showExpandedBanner:e})=>e&&"border: none; padding-bottom: 0;"}
+`,w=i.div.withConfig({displayName:"SignInInfo"})`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  ${({expanded:e})=>e&&`\n  height: 240px;\n  ${d(m.lg)} {\n    height: 185px;\n  }\n  `}
+  ${({theme:e,expanded:t})=>l(e,t?"typography.definitions.consumptionEditorial.subhed-aux-primary":"typography.definitions.consumptionEditorial.subhed-aux-secondary")};
+  margin-bottom: ${o(4)};
+  background: ${({theme:e})=>s(e,"colors.interactive.base.black")};
+  padding: ${o(2)};
+  text-transform: none;
+  color: ${({theme:e})=>s(e,"colors.interactive.base.white")};
+
+  a {
+    color: ${({theme:e})=>s(e,"colors.interactive.base.white")};
+    font-weight: bold;
+  }
+  ${c(m.md)} {
+    margin-left: calc(-1 * var(--grid-margin));
+    /* Full bleed effect */
+    width: calc(100% + (2 * var(--grid-margin)));
+  }
+  ${({expanded:e})=>!e&&`${d(m.lg)} {\n      br {\n        display: none;\n      }\n    }\n  `}
+`,b=i.div.withConfig({displayName:"FormWrapper"})``,v=i(a).withConfig({displayName:"FormText"})`
+  ${({isTextDisabled:e})=>e&&"opacity: 0.5;"};
+`;v.defaultProps={colorToken:"colors.consumption.body.standard.body",typeIdentity:"typography.definitions.consumptionEditorial.subhed-aux-secondary"};const R=i(v).withConfig({displayName:"ErrorText"})`
+  margin-bottom: ${o(2)};
+`,C=i(g).withConfig({displayName:"ReCaptcha"})`
+  display: inline-block;
+  margin-top: ${o(2)};
+  margin-bottom: ${o(2)};
+
+  ${y("margin",!0)};
+`,I=i(u).withConfig({displayName:"RatingFormRating"})`
+  padding: ${o(3)} 0 ${o(2)};
+  ${p},
+  svg {
+    width: 64px;
+    height: 64px;
+  }
+`,M=i(h.Utility).withConfig({displayName:"SubmitRatingWrapper"})`
+  margin: 0 auto ${o(2)};
+  color: ${({theme:e})=>s(e,"colors.interactive.base.white")};
+`;e.exports={Wrapper:f,SignInInfo:w,FormText:v,FormWrapper:b,ErrorText:R,RatingFormRating:I,ReCaptcha:C,SubmitRatingWrapper:M}},39374:(e,t,n)=>{const i=n(37243);t.A=(0,i.defineMessages)({promptText:{id:"RatingsForm.PromptText",defaultMessage:"How would you rate {RATING_SUBJECT}?",description:"Prompt Text on the Recipe page",isConfigurable:!0},previousRatingText:{id:"RatingsForm.PreviousRatingText",defaultMessage:"You previously rated {RATING_SUBJECT}.",description:"Previous Rating Text on Recipe page",isConfigurable:!0},loadingText:{id:"RatingsForm.LoadingText",defaultMessage:"Loading...",description:"Loading text for ratingForm",isConfigurable:!0},successText:{id:"RatingsForm.SuccessText",defaultMessage:"Thanks for your feedback!",description:"success text after user rating and recaptcha validation",isConfigurable:!0}})},8101:(e,t,n)=>{const i=n(5556),a=n(96540),{useIntl:o}=n(37243),{useState:r,useCallback:s}=n(96540),{trackComponent:l}=n(92716),{interactionResponse:d}=n(56187),c=n(21093),m=n(71001),u=n(32844),{ReviewListWrapper:p,ReviewListItems:g,ReviewListItem:y,ReviewListReview:h,ReviewListMeta:f,ReviewListMetaItem:w,ReviewListUsername:b,ReviewListLocation:v,ReviewListDate:R,ReviewListButton:C,ReviewListError:I,ReviewText:M,ReviewerUserName:x,ReviewListMetaData:N,ReviewListTimeStamp:E,ReviewLikeCount:L,ReviewReplyLabel:T,ReviewListMetaInfo:$,ReviewItem:S,ReviewListReactionButton:k,ReviewReplyWrapper:U,ReviewReplyMetaDataWrapper:A}=n(16631),{Comment:F,Like:B,LikeFilled:D}=n(24695),{Dot:_}=n(91470),P=n(27517),H=n(22509),q=n(61057),{trackContentEngagementEvent:O,trackUserAccountEvent:W}=n(14307),{commentingAction:j}=n(85554),G=n(74657).A,Y=({className:e,commentReactionHandler:t,commentingUrl:n,cta:i,hasCommunityExperienceEnabled:Y,id:K,items:z,hasErrored:V=!1,isLoading:Q=!1,user:J,reviewModalProps:X,userReactions:Z,usernameSignInDek:ee,signInHed:te,signInHedSpanTag:ne,signInMessage:ie,shouldEnableReply:ae,showMessageBannerHandler:oe,replyLimit:re,updateUserReactions:se,siteUserName:le,handleUsernameChange:de,shouldEnableRatings:ce,shouldEnableTags:me=!1,shouldEnableUpvotes:ue})=>{a.useEffect((()=>{(async()=>{await d(),l("ReviewList")})()}),[]);const[pe,ge]=r({}),[ye,he]=r([]),{formatMessage:fe}=o(),we=s((e=>{if(J?.isAuthenticated)le?(he((t=>[...t,e])),ge((t=>({...t,[e]:!0})))):void 0!==le&&(q.doDisplayModal({dangerousDek:ee,successCallback:t=>{de(t),he((t=>[...t,e])),ge((t=>({...t,[e]:!0})))},source:"community_reply"}),W({type:"impression",subject:"username_modal",label:"Create Username",source_type:"community_reply"}));else{const e=`${document.location.pathname}#${j.LEAVE_REPLY}`,t="COMMUNITY_REPLY_TO_COMMENT",n={subject:"community_comment",label:"Reply",source_type:t,type:"login"};H.doDisplayModal({dangerousDek:ie,dangerousHed:te,dangerousHedSpanTag:ne,redirectURL:e,shouldHideIllustration:!0,source:t,snowplowData:n})}O({type:"attempt",subject:"community_comment",label:"reply",items:[{content_id:e}]},{skipDuplicateEvent:!1})}),[le]);return a.createElement(p,{className:e,id:K,tabIndex:"-1"},z&&z.length>0?a.createElement(g,null,z.map((e=>{const{id:i,commentId:o,text:r,username:s,location:l,date:d,rating:p,replies:g,replyPageInfo:C,recipeId:I,revisionId:H,tags:q}=e||{},W=me&&!!q?.length;return Y?a.createElement(S,{key:[i,r,s,d].join("-")},a.createElement($,null,s&&a.createElement(N,{key:s,as:"div"},a.createElement(x,null,s)),ce&&p&&a.createElement(N,null,a.createElement(c,{averageRatingCount:p}))),a.createElement($,null,a.createElement(N,{as:"div"},W&&a.createElement(a.Fragment,null,q.map((e=>a.createElement(P,{key:e},e))),a.createElement(_,null)),a.createElement(E,null,d))),r&&a.createElement(M,{dangerouslySetInnerHTML:{__html:r}}),a.createElement(A,null,a.createElement($,null,ue&&a.createElement(k,{isIconButton:!0,name:"comment-reaction",label:"Reaction",onClickHandler:()=>(({item:e})=>{const n=Z[e.commentId]?.viewerActionPresence?"unlike":"like";O({type:n,subject:"community_comment"},{skipDuplicateEvent:!1}),t({item:e})})({item:e}),ButtonIcon:Z[o]?.viewerActionPresence?D:B}),ue&&a.createElement(L,null,Z[o]?.reactionCount),ae&&a.createElement(U,{onClick:()=>we(o)},a.createElement(F,null),a.createElement(T,null,fe(G.reviewReplyLabel))))),pe[o]&&ye.includes(o)&&J?.isAuthenticated&&a.createElement(m,{commentId:o,username:s,recipeId:I,revisionId:H,commentingUrl:n,closeReply:()=>(e=>{ge((t=>({...t,[e]:!1})))})(o),reviewModalProps:X,showMessageBannerHandler:oe,source:"community_comment"}),g&&g.length>0&&a.createElement(u,{username:s,replies:g,replyPageInfo:C,reviewModalProps:X,commentReactionHandler:t,user:J,userReactions:Z,updateUserReactions:se,usernameSignInDek:ee,signInHed:te,signInHedSpanTag:ne,signInMessage:ie,shouldEnableReply:ae,commentId:o,replyLimit:re,siteUserName:le,handleUsernameChange:de,recipeId:I,showMessageBannerHandler:oe,commentingUrl:n,shouldEnableUpvotes:ue})):a.createElement(y,{key:[i,r,s,l,d].join("-")},r?a.createElement(h,null,r):null,s||l||d?a.createElement(f,null,s?a.createElement(w,{key:s},a.createElement(b,null,s)):null,l?a.createElement(w,{key:l},a.createElement(v,null,l)):null,d?a.createElement(w,{key:d},a.createElement(R,null,d)):null):null)}))):null,!V&&i?.onClick&&i?.label?a.createElement(C,{inputKind:"button",onClickHandler:i.onClick,label:Q?fe(G.loading):i.label,isDisabled:Q}):null,V?a.createElement(I,null,fe(G.reviewListError,{br:a.createElement("br",null)})):null)};Y.propTypes={className:i.string,commentingUrl:i.string.isRequired,commentReactionHandler:i.func,cta:i.shape({onClick:i.func,label:i.string}),handleUsernameChange:i.func,hasCommunityExperienceEnabled:i.bool,hasErrored:i.bool,id:i.string,isLoading:i.bool,items:i.arrayOf(i.shape({id:i.number,text:i.string,username:i.string,date:i.string,revisionId:i.string.isRequired,commentId:i.string.isRequired,viewerActionPresence:i.bool,reactionCount:i.number})),replyLimit:i.number,reviewModalProps:i.object,shouldEnableRatings:i.bool,shouldEnableReply:i.bool,shouldEnableTags:i.bool,shouldEnableUpvotes:i.bool,showMessageBannerHandler:i.func,signInHed:i.string,signInHedSpanTag:i.string,signInMessage:i.string,siteUserName:i.string,updateUserReactions:i.func,user:i.shape({isAuthenticated:i.bool.isRequired,amguuid:i.string}).isRequired,usernameSignInDek:i.string,userReactions:i.objectOf(i.shape({viewerActionPresence:i.bool.isRequired,reactionCount:i.number.isRequired}).isRequired)},e.exports=Y},47125:(e,t,n)=>{e.exports=n(8101)},16631:(e,t,n)=>{const i=n(75999).default,{BaseLink:a,BaseText:o}=n(76955),{calculateSpacing:r,getColorStyles:s,getColorToken:l,getTypographyStyles:d,maxScreen:c}=n(26865),{BREAKPOINTS:m}=n(96472),u=n(43438),p=n(73730),{ToggleButton:g}=n(18161),{RatingWrapper:y,RatingStarHalf:h,RatingStar:f,RatingLabel:w,RatingInput:b}=n(97927),v=i(p.Primary).withConfig({displayName:"ReviewListButton"})`
+  align-self: center;
+  margin-top: ${r(4)};
+  margin-bottom: ${r(4)};
+`,R=i(o).withConfig({displayName:"ReviewListDate"})``;R.defaultProps={as:"time"},R.defaultProps={colorToken:"colors.consumption.body.standard.body",typeIdentity:"typography.definitions.globalEditorial.accreditation-core"};const C=i(o).withConfig({displayName:"ReviewListLocation"})``;C.defaultProps={colorToken:"colors.consumption.body.standard.body",typeIdentity:"typography.definitions.globalEditorial.accreditation-core"};const I=i(o).withConfig({displayName:"ReviewListUsername"})``;I.defaultProps={colorToken:"colors.consumption.body.standard.body",typeIdentity:"typography.definitions.globalEditorial.accreditation-core"};const M=i(o).withConfig({displayName:"ReviewListMetaItem"})`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  & + & {
+    &::before {
+      margin: 0 ${r(1)};
+      content: '·';
+    }
+  }
+`;M.defaultProps={as:"li",colorToken:"colors.consumption.body.standard.body",typeIdentity:"typography.definitions.globalEditorial.accreditation-core"};const x=i.ul.withConfig({displayName:"ReviewListMeta"})`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: ${r(2)} 0 0;
+  padding: 0;
+  list-style: none;
+`,N=i(o).withConfig({displayName:"ReviewListReview"})``;N.defaultProps={colorToken:"colors.consumption.body.standard.body",typeIdentity:"typography.definitions.consumptionEditorial.description-embed"};const E=i.li.withConfig({displayName:"ReviewListItem"})`
+  margin-top: ${r(3)};
+  border-width: 1px 0 0;
+  border-style: solid;
+  ${({theme:e})=>s(e,"border-color","colors.consumption.body.standard.divider")};
+  padding-top: ${r(3)};
+
+  :first-child {
+    margin-top: 0;
+    border-top: 0;
+    padding-top: 0;
+  }
+`,L=i.ul.withConfig({displayName:"ReviewListItems"})`
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+`,T=i(u).withConfig({displayName:"ReviewListCarat"})`
+  margin-left: ${r(1)};
+  width: ${r(1)};
+  height: ${r(1)};
+  ${({theme:e})=>s(e,"fill","colors.interactive.base.black")};
+
+  path {
+    transform: rotate(180deg);
+    transform-origin: center;
+  }
+`,$=i(a).withConfig({displayName:"ReviewListUtilityLink"})``;$.defaultProps={colorToken:"colors.interactive.base.black",typeIdentity:"typography.definitions.utility.button-bulletin"};const S=i(o).withConfig({displayName:"ReviewListTitle"})``;S.defaultProps={as:"h2",colorToken:"colors.consumption.body.standard.subhed",typeIdentity:"typography.definitions.consumptionEditorial.subhed-aux-primary"};const k=i.div.withConfig({displayName:"ReviewListTitleWrapper"})`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: ${r(4)} 0 0;
+  ${({disableTopBorder:e,theme:t})=>!e&&`border-width: 2px 0 0;\n      border-style: solid;\n      ${s(t,"border-color","colors.consumption.body.standard.divider")};\n      padding-top: ${r(4)};\n    `}
+  ${({disableTopBorder:e})=>e&&`\n      padding-bottom: ${r(4)};\n    `}
+`,U=i.div.withConfig({displayName:"ReviewListWrapper"})`
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  ${c(m.md)} {
+    margin-left: calc(-1 * var(--grid-margin));
+    padding-right: var(--grid-margin);
+    padding-left: var(--grid-margin);
+    /* Full bleed effect */
+    width: calc(100% + (2 * var(--grid-margin)));
+  }
+`,A=i(o).withConfig({displayName:"ReviewListError"})`
+  margin: ${r(4)} 0;
+  text-align: center;
+`,F=i.li.withConfig({displayName:"ReviewItem"})`
+  margin-top: ${r(3)};
+  border-width: 1px 0 0;
+  border-style: solid;
+  ${({theme:e})=>s(e,"border-color","colors.consumption.body.standard.divider")};
+  padding-top: ${r(3)};
+
+  :first-child {
+    margin-top: ${r(4)};
+    border-top: 0;
+    padding-top: 0;
+    ${c(m.md)} {
+      margin-top: ${r(3)};
+    }
+  }
+
+  :last-child {
+    margin-bottom: ${r(3)};
+    ${c(m.md)} {
+      margin-bottom: ${r(3)};
+    }
+  }
+
+  ${g} {
+    ${({theme:e})=>d(e,"typography.definitions.foundation.link-utility")};
+    background-color: rgba(
+      ${l("colors.interactive.social.primary-hover",{rgbOnly:!0})},
+      0.1
+    );
+    ${({theme:e})=>s(e,"color","colors.interactive.base.black")};
+
+    &[aria-checked='true'] {
+      transition: none;
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      outline: 0;
+      box-shadow: none;
+      cursor: unset;
+      text-decoration: none;
+    }
+  }
+  ${y} {
+    padding: 0;
+  }
+`,B=i(o).withConfig({displayName:"ReviewerUserName"})`
+  padding-right: 10px;
+  ${({theme:e})=>s(e,"color","colors.consumption.body.standard.body")};
+  ${({theme:e})=>d(e,"typography.definitions.globalEditorial.accreditation-feature")};
+
+  ${c(m.md)} {
+    padding-right: ${r(1)};
+  }
+`,D=i(o).withConfig({displayName:"ReviewListTimeStamp"})`
+  ${({theme:e})=>s(e,"color","colors.interactive.base.dark")};
+  ${({theme:e})=>d(e,"typography.definitions.foundation.meta-secondary")};
+`,_=i(o).withConfig({displayName:"ReviewText"})`
+  word-wrap: break-word;
+  white-space: pre-wrap;
+
+  ${({theme:e})=>s(e,"color","colors.consumption.body.standard.body")};
+  ${({theme:e})=>d(e,"typography.definitions.consumptionEditorial.body-core")};
+`,P=i(o).withConfig({displayName:"ReviewListMetaData"})`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &&& {
+    ${h} {
+      path {
+        ${({theme:e})=>s(e,"fill","colors.background.brand")};
+      }
+    }
+    ${f} {
+      width: ${r(2.5)};
+    }
+    ${b} {
+      &:disabled + ${w} {
+        cursor: unset;
+      }
+    }
+
+    ${g}:not(:first-of-type) {
+      margin-left: ${r()};
+    }
+  }
+`,H=i(o).withConfig({displayName:"ReviewLikeCount"})`
+  padding-right: ${r(2)};
+  ${({theme:e})=>s(e,"color","colors.interactive.base.dark")};
+  ${({theme:e})=>d(e,"typography.definitions.consumptionEditorial.citation")};
+`,q=i(o).withConfig({displayName:"ReviewReplyLabel"})`
+  ${({theme:e})=>s(e,"color","colors.interactive.base.dark")};
+  ${({theme:e})=>d(e,"typography.definitions.consumptionEditorial.citation")};
+  cursor: pointer;
+  padding-right: ${r(.5)};
+`,O=i.div.withConfig({displayName:"ReviewReplyWrapper"})`
+  display: flex;
+  flex-direction: row;
+`,W=i.div.withConfig({displayName:"ReviewReplyWrapper"})`
+  margin-top: ${r(1.25)};
+`,j=i.ul.withConfig({displayName:"ReviewListMetaInfo"})`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: ${r(4)}, ${r(4)};
+  padding: 0;
+  list-style: none;
+
+  :first-child {
+    margin-bottom: 10px;
+    ${c(m.md)} {
+      margin-bottom: ${r(1)};
+    }
+  }
+
+  &:not(:first-child) {
+    margin-bottom: ${r(1.5)};
+    ${c(m.md)} {
+      margin-bottom: ${r(2)};
+    }
+  }
+
+  :last-child {
+    margin-top: ${r(1.5)};
+    margin-bottom: ${r(1)};
+    ${c(m.md)} {
+      margin-top: ${r(2)};
+      margin-bottom: 0;
+    }
+  }
+
+  .icon-dots {
+    padding-right: 6px;
+    padding-left: 6px;
+
+    ${({theme:e})=>s(e,"fill","colors.interactive.base.dark")};
+
+    ${c(m.md)} {
+      padding-right: ${r(.5)};
+      padding-left: ${r(.5)};
+    }
+  }
+
+  .icon-like,
+  .icon-like-filled,
+  .icon-comment {
+    margin-top: 3px;
+    cursor: pointer;
+    width: ${r(4)};
+    height: 18px;
+
+    path {
+      ${({theme:e})=>s(e,"fill","colors.interactive.base.dark")};
+      ${({theme:e})=>s(e,"stroke","colors.interactive.base.dark")};
+    }
+
+    &:hover path {
+      ${({theme:e})=>s(e,"fill","colors.interactive.base.black")};
+      ${({theme:e})=>s(e,"stroke","colors.interactive.base.black")};
+    }
+  }
+
+  .icon-like-filled {
+    width: ${r(4)};
+    height: 18px;
+
+    path {
+      ${({theme:e})=>s(e,"fill","colors.interactive.base.black")};
+      ${({theme:e})=>s(e,"stroke","colors.interactive.base.black")};
+    }
+  }
+`,G=i(p.Utility).withConfig({displayName:"ReviewListReactionButton"})`
+  padding: 0;
+
+  &,
+  &:focus,
+  &:hover {
+    border: 0;
+    background-color: transparent;
+  }
+`;e.exports={ReviewListWrapper:U,ReviewListTitleWrapper:k,ReviewListTitle:S,ReviewListUtilityLink:$,ReviewListCarat:T,ReviewListItems:L,ReviewListItem:E,ReviewListReactionButton:G,ReviewListReview:N,ReviewListMeta:x,ReviewListMetaItem:M,ReviewListUsername:I,ReviewListLocation:C,ReviewListDate:R,ReviewListButton:v,ReviewListError:A,ReviewerUserName:B,ReviewListMetaData:P,ReviewListTimeStamp:D,ReviewText:_,ReviewLikeCount:H,ReviewReplyLabel:q,ReviewListMetaInfo:j,ReviewItem:F,ReviewReplyWrapper:O,ReviewReplyMetaDataWrapper:W}},74657:(e,t,n)=>{const i=n(37243);t.A=(0,i.defineMessages)({loading:{id:"ReviewList.Loading",defaultMessage:"Loading…",description:"Button label while list loads"},reviewListError:{id:"ReviewList.ReviewListError",defaultMessage:"Sorry, more reviews can‘t be loaded right now. {br} Please try again later.",description:"Error message while loading list"},reviewReplyLabel:{id:"ReviewList.ReviewReplyLabel",defaultMessage:"Reply",description:"Reply Icon label"}})},5697:(e,t,n)=>{const{getFromNowDateFormat:i}=n(45526);e.exports={getFromNowDateFormat:i}},45526:(e,t,n)=>{const i=n(39965);e.exports={getFromNowDateFormat:({locale:e="en-US",date:t,formatMessage:n,includeHourAndMin:a=!1})=>{const o=new Intl.RelativeTimeFormat(e,{localeMatcher:"best fit",numeric:"always",style:"long"}),r=new Intl.DateTimeFormat(e,{hour:"2-digit",minute:"2-digit",hour12:!0,localeMatcher:"best fit"}),s=864e5,l=30*s,d=365*s,c=25*s,m=45*s,u=319*s,p=547*s;return(e=>{if(e){const t=(e=>{const t=(new Date).getTime()-new Date(e).getTime();return t<=44e3?n(i.fewSecondsAgoLabel):t<=89e3?n(i.aMinAgoLabel):t<=264e4?o.format(-Math.ceil(t/6e4),"minute"):t<=534e4?n(i.anHourAgoLabel):t<=756e5?o.format(-Math.ceil(t/36e5),"hour"):t<=126e6?n(i.aDayAgoLabel):t<=c?o.format(-Math.ceil(t/s),"day"):t<=m?n(i.aMonthAgoLabel):t<=u?o.format(-Math.ceil(t/l),"month"):t<=p?n(i.aYearAgoLabel):o.format(-Math.ceil(t/d),"year")})(e),g=r.format(new Date(e));return a?`${t}, ${g}`:t}return null})(t)}}},39965:(e,t,n)=>{const{defineMessages:i}=n(37243);e.exports=i({fewSecondsAgoLabel:{id:"LiveStory.feedFewSecondsAgoLabel",defaultMessage:"a few seconds ago",description:""},aMinAgoLabel:{id:"LiveStory.feedAMinAgoLabel",defaultMessage:"a minute ago",description:""},anHourAgoLabel:{id:"LiveStory.feedAnHourAgoLabel",defaultMessage:"an hour ago",description:""},aDayAgoLabel:{id:"LiveStory.feedADayAgoLabel",defaultMessage:"a day ago",description:""},aMonthAgoLabel:{id:"LiveStory.feedAMonthAgoLabel",defaultMessage:"a month ago",description:""},aYearAgoLabel:{id:"LiveStory.feedAYearAgoLabel",defaultMessage:"a year ago",description:""}})},74491:(e,t,n)=>{const i=n(96540),a=n(5556),{useIntl:o}=n(37243),{trackComponent:r}=n(92716),{interactionResponse:s}=n(56187),l=n(52205).A,{ReviewFormQuestion:d,ReviewFormActions:c,ReviewFormRadioGroup:m,ReviewFormSubmitButton:u,ReviewFormRadio:p,ReviewFormMinimised:g,ReviewFormSignin:y,ReviewFormWrapper:h,ReviewFormHed:f,ReviewFormWithValidation:w,ReviewFormAlert:b,ReviewFormTextFieldErrorText:v}=n(68027),R=n(67685),C=n(89662),I=e=>{const t=[...e.elements].reduce(((e,t)=>{let{value:n}=t;const i="checkbox"===t.type,a="radio"===t.type,o=!t.checked,r=""===n;if(i&&(n=t.checked),r)return e;if(a){if(o)return e;n=Boolean(Number(n))}return e[t.name]=n,e}),{});return t["g-recaptcha-response"]&&delete t["g-recaptcha-response"],t},M=({ariaLabel:e,children:t,isSignedIn:n,onMinimise:a,hasReviewFormSignIn:o,signInURL:r})=>n?i.createElement(g,{role:"button",tabIndex:"0",onClick:a,onKeyPress:a,"aria-label":e},t):i.createElement(g,null,o&&i.createElement(y,{href:r,rel:"nofollow",id:"stacy"},e),i.createElement("div",null,t));M.propTypes={ariaLabel:a.string.isRequired,children:a.node.isRequired,hasReviewFormSignIn:a.bool,isSignedIn:a.bool.isRequired,onMinimise:a.func.isRequired,signInURL:a.string.isRequired};const x=({className:e,error:t,externalValidationErrors:n,fakeInputPlaceholderText:a,hasReviewFormSignIn:g=!0,hasSucceeded:y,hed:x,isMinimised:N=!0,isSubmitting:E=!1,onClickHandler:L=(()=>{}),onSubmitHandler:T,signInURL:$,userId:S})=>{i.useEffect((()=>{(async()=>{await s(),r("ReviewForm")})()}),[]);const k=o(),[U,A]=i.useState(n||{}),[F,B]=i.useState(!1),[D,_]=i.useState(!1),[P,H]=i.useState(N),[q,O]=i.useState(!1),W=i.useRef();i.useEffect((()=>{O(!!S)}),[S]);const j=k.formatMessage(l.invalidFieldErrorMessage),G=a||k.formatMessage(l.fakeInputPlaceholderText);return i.useEffect((()=>{window.location.hash.includes("leave-a-review")&&W?.current?.scrollIntoView({block:"start"})}),[W]),i.useEffect((()=>{n&&A(((e,t)=>e?.reduce(((e,n)=>n.context?.peers?(n.context?.peers.forEach((n=>{e[n]=t})),e):(e[n.context.key]=t,e)),{}))(n,j))}),[n,j]),i.createElement(h,{className:e,ref:W,"data-testid":"ReviewForm",onClick:L},i.createElement(f,{isTextDisabled:!g&&!q},x||k.formatMessage(l.hed)),t&&i.createElement(b,null,k.formatMessage(l.alertMessageError)),y&&!t&&i.createElement(b,null,k.formatMessage(l.alertMessageSuccess)),!t&&!y&&P&&i.createElement(M,{ariaLabel:G,onMinimise:e=>{e.preventDefault(),H(!1)},signInURL:$,isSignedIn:q,hasReviewFormSignIn:g},i.createElement(C.SingleLine,{name:"isMinimised",formName:"isMinimised",label:k.formatMessage(l.reviewTextFieldLabel),placeholder:G,tabIndex:"-1","aria-hidden":!0,hideLabel:!0})),!t&&!y&&!P&&i.createElement(w,{onSubmitHandler:e=>{A({});const t={...I(e.target)};t.reviewerInfo||(t.isAnonymous=!0),T&&T(t)},errorMessages:U,"data-testid":"review-form-with-validation"},i.createElement("input",{type:"hidden",name:"userId",value:S}),i.createElement(C.MultiLine,{hasAutoFocus:!0,name:"reviewText",formName:"reviewText",label:k.formatMessage(l.reviewTextFieldLabel),hideLabel:!0,placeholder:k.formatMessage(l.reviewTextFieldPlaceholder),errorText:U.reviewText,isDisabled:E,charCountHandler:e=>{_(e>0)}}),i.createElement(C.SingleLine,{name:"reviewerInfo",formName:"reviewerInfo",label:k.formatMessage(l.reviewerInfoFieldLabel),placeholder:k.formatMessage(l.reviewerInfoFieldPlaceholder),errorText:U.reviewerInfo,isDisabled:F||E}),i.createElement(R.Checkbox,{index:1,name:"isAnonymous",formName:"isAnonymous",label:k.formatMessage(l.isAnonymousCheckboxLabel),value:"yes",errorText:U.isAnonymous,onChangeHandler:e=>{B(e.target.checked)},isDisabled:E}),i.createElement(C.SingleLine,{className:"review-form__location",name:"location",formName:"location",label:k.formatMessage(l.locationFieldLabel),placeholder:k.formatMessage(l.locationFieldPlaceholder),errorText:U.location,isDisabled:E}),i.createElement(m,{"aria-labelledby":"review-form__question",role:"radiogroup"},i.createElement(d,{id:"review-form__question"},k.formatMessage(l.willPrepareAgainRadioLabel)),i.createElement(p,{index:1,ariaLabelledBy:"review-form__question",name:"willPrepareAgain",formName:"willPrepareAgain",label:k.formatMessage(l.willPrepareAgainOption1Label),value:"1",isDisabled:E}),i.createElement(p,{index:2,ariaLabelledBy:"review-form__question",name:"willPrepareAgain",formName:"willPrepareAgain",label:k.formatMessage(l.willPrepareAgainOption2Label),value:"0",isDisabled:E})),i.createElement(c,{"data-testid":"ReviewFormActions"},i.createElement(u,{inputKind:"submit",label:k.formatMessage(E?l.submitButtonLabelLoading:l.submitButtonLabel),isDisabled:!D||E}),Object.keys(U).length>0&&i.createElement(v,null,j))))};x.propTypes={className:a.string,error:a.string,externalValidationErrors:a.arrayOf(a.object),fakeInputPlaceholderText:a.string,hasReviewFormSignIn:a.bool,hasSucceeded:a.bool,hed:a.string,isMinimised:a.bool,isSubmitting:a.bool,onClickHandler:a.func,onSubmitHandler:a.func,signInURL:a.string.isRequired,userId:a.string},e.exports=x},24465:(e,t,n)=>{const i=n(74491);e.exports=i},68027:(e,t,n)=>{const i=n(75999).default,a=n(72983),o=n(67685),r=n(73730),{BaseLink:s,BaseText:l}=n(76955),{UtilitySelectionControlLabelWrapper:d}=n(20404),{calculateSpacing:c,getColorStyles:m,getTypographyStyles:u}=n(26865),{TextFieldLabelText:p,TextFieldErrorText:g}=n(60434),y=i.div.withConfig({displayName:"ReviewFormWrapper"})`
+  .review-form__location {
+    ${p} {
+      ${({theme:e})=>u(e,"typography.definitions.utility.label")}
+      ${({theme:e})=>m(e,"color","colors.discovery.body.white.heading")};
+    }
+  }
+`,h=i(l).withConfig({displayName:"ReviewFormHed"})`
+  padding-bottom: ${c(3)};
+  ${({isTextDisabled:e})=>e&&"opacity: 0.5;"};
+`;h.defaultProps={colorToken:"colors.consumption.body.standard.subhed",typeIdentity:"typography.definitions.consumptionEditorial.subhed-aux-primary"};const f=i(l).withConfig({displayName:"ReviewFormAlert"})`
+  border-bottom: 1px solid;
+  ${({theme:e})=>m(e,"border-color","colors.consumption.body.standard.divider")};
+  padding-bottom: ${c(4)};
+`,w=i(a).withConfig({displayName:"ReviewFormWithValidation"})`
+  > div,
+  > label,
+  > span {
+    padding-bottom: ${c(4)};
+  }
+
+  .text-field {
+    margin-bottom: 0;
+  }
+`,b=i.div.withConfig({displayName:"ReviewFormActions"})`
+  margin-bottom: ${c(4)};
+  border-bottom: 1px solid;
+  ${({theme:e})=>m(e,"border-color","colors.consumption.body.standard.divider")};
+`,v=i.div.withConfig({displayName:"ReviewFormRecaptcha"})``,R=i(s).withConfig({displayName:"ReviewFormSignin"})``,C=i.div.withConfig({displayName:"ReviewFormMinimised"})`
+  position: relative;
+
+  input.text-field__control {
+    cursor: pointer;
+  }
+
+  ${R} {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    color: transparent;
+  }
+`,I=i.div.withConfig({displayName:"ReviewFormRadioGroup"})`
+  height: 82px;
+`,M=i(o.Radio).withConfig({displayName:"ReviewFormRadio"})`
+  &${d} {
+    display: inline-grid;
+
+    &:last-child {
+      margin-left: ${c(3.5)};
+    }
+  }
+`,x=i(l).withConfig({displayName:"ReviewFormQuestion"})`
+  padding-bottom: ${c(1)};
+  ${({theme:e})=>m(e,"color","colors.discovery.body.white.heading")};
+  ${({theme:e})=>u(e,"typography.definitions.utility.label")};
+`;x.defaultProps={as:"div"};const N=i(r.Primary).withConfig({displayName:"ReviewFormSubmitButton"})`
+  width: 100%;
+`,E=i(g).withConfig({displayName:"ReviewFormTextFieldErrorText"})``;e.exports={ReviewFormQuestion:x,ReviewFormRadioGroup:I,ReviewFormHed:h,ReviewFormActions:b,ReviewFormAlert:f,ReviewFormRecaptcha:v,ReviewFormSubmitButton:N,ReviewFormWithValidation:w,ReviewFormWrapper:y,ReviewFormSignin:R,ReviewFormMinimised:C,ReviewFormRadio:M,ReviewFormTextFieldErrorText:E}},52205:(e,t,n)=>{const i=n(37243);t.A=(0,i.defineMessages)({hed:{id:"ReviewForm.Hed",defaultMessage:"Leave a Review",description:"Form's heading"},fakeInputPlaceholderText:{id:"ReviewForm.FakeInputPlaceholderText",defaultMessage:"Tell us what you think",description:"Appears when the form is minimised"},invalidFieldErrorMessage:{id:"ReviewForm.InvalidFieldErrorMessage",defaultMessage:"Required fields missing",description:"Message for when fields are missing"},alertMessageError:{id:"ReviewForm.AlertMessageError",defaultMessage:"Your feedback wasn't posted due to some error, please try again.",description:"Message for the alert when the review form errors"},alertMessageSuccess:{id:"ReviewForm.AlertMessageSuccess",defaultMessage:"Thanks for your feedback!",description:"Message for the alert when the review form is succesful"},reviewTextFieldLabel:{id:"ReviewForm.ReviewTextFieldLabel",defaultMessage:"Your Review",description:"The label for the main review text field"},reviewTextFieldPlaceholder:{id:"ReviewForm.ReviewTextFieldPlaceholder",defaultMessage:"Let us know your thoughts…",description:"The placeholder hint message for the main review text field"},reviewerInfoFieldLabel:{id:"ReviewForm.ReviewerInfoFieldLabel",defaultMessage:"Display Name",description:"The label for the reviewer name field"},reviewerInfoFieldPlaceholder:{id:"ReviewForm.ReviewerInfoFieldPlaceholder",defaultMessage:"Jane Doe",description:"The placeholder hint message for the reviewer name field"},isAnonymousCheckboxLabel:{id:"ReviewForm.IsAnonymousCheckboxLabel",defaultMessage:"Share anonymously",description:"The label for the anonymous checkbox"},locationFieldLabel:{id:"ReviewForm.LocationFieldLabel",defaultMessage:"Where are you from?",description:"The label for the location field"},locationFieldPlaceholder:{id:"ReviewForm.LocationFieldPlaceholder",defaultMessage:"Boston, MA",description:"The placeholder hint message for the location field"},willPrepareAgainRadioLabel:{id:"ReviewForm.WillPrepareAgainRadioLabel",defaultMessage:"Would you make this recipe again?",description:"The label for the radio group"},willPrepareAgainOption1Label:{id:"ReviewForm.WillPrepareAgainOption1Label",defaultMessage:"Yes",description:"The label for first option in the radio group"},willPrepareAgainOption2Label:{id:"ReviewForm.WillPrepareAgainOption2Label",defaultMessage:"No",description:"The label for second option in the radio group"},submitButtonLabel:{id:"ReviewForm.SubmitButtonLabel",defaultMessage:"Submit",description:"The label for submit button"},submitButtonLabelLoading:{id:"ReviewForm.SubmitButtonLabelLoading",defaultMessage:"Loading…",description:"The label for submit button when it's loading"}})},3890:(e,t,n)=>{const i=n(96540),a=n(5556),{useIntl:o}=n(37243),{useEffect:r,useRef:s,useState:l}=n(96540),{trackMessageUnitEvent:d}=n(14307),{trackComponent:c}=n(92716),{interactionResponse:m}=n(56187),u=n(25965),p=n(15343),g=n(99244),y=n(39321).A,h=n(61057),f=n(45771),{trackUserAccountEvent:w}=n(14307),{AlertArrow:b,ReviewNoteFormWrapper:v,ReviewNoteSectionContainer:R,ReviewNoteUserInfo:C,ReviewerInfoLabel:I,ReviewerName:M,ReviewerInfoIconButtonWrapper:x,ReviewNoteRatingWrapper:N,RatingFormRating:E,ReviewNotesFormSignin:L,ReviewNotesFormMinimised:T,ReviewerRatingLabel:$,ReviewerInfoAlertToolTip:S,ReveiwerInfoText:k,ReviewTagsInfoLabel:U,ReviewNotesToggleChipListWrapper:A,ReviewNotesFormActions:F,ReviewNotesFormCancelButton:B,ReviewNotesFormTextFieldErrorText:D,ReviewNotesFormSubmitButton:_,ReviewNotesSignInMessageBanner:P,MessageBannerText:H,ReviewNoteTextField:q,ReviewNotesDivider:O}=n(37887),W=n(89662),j=n(73730),{trackContentEngagementEvent:G}=n(14307),{useOutsideClick:Y}=n(87098),K=({ariaLabel:e,children:t,handleUserSignInStatus:n,isSignedIn:a,onMinimise:o,hasReviewNotesFormSignIn:r,signInURL:s,usernameSignInDek:l,trackAddNoteEvent:d,handleUsernameChange:c,siteUserName:m})=>{const u={type:"impression",label:"Create Username",subject:"username_modal",source_type:"community_comment"};return a?i.createElement(T,{role:"button",tabIndex:"0",onClick:e=>{d(),(e=>{m?o(e,m):void 0!==m&&(w(u),h.doDisplayModal({dangerousDek:l,successCallback:t=>{c(t),o(e,t)},source:"community_comment"}))})(e)},onKeyPress:o,"aria-label":e},t):i.createElement(T,{onClick:e=>{n(e)}},r&&i.createElement(L,{href:s,rel:"nofollow",id:"stacy"},e),i.createElement("div",null,t))};K.propTypes={ariaLabel:a.string.isRequired,children:a.node.isRequired,handleUsernameChange:a.func.isRequired,handleUserSignInStatus:a.func,hasReviewNotesFormSignIn:a.bool,isSignedIn:a.bool.isRequired,onMinimise:a.func.isRequired,signInURL:a.string.isRequired,siteUserName:a.string,trackAddNoteEvent:a.func,usernameSignInDek:a.string};const z=({className:e,shouldEnableTags:t=!1,reviewNoteTags:n=[],reviewerRatingLabel:a,shouldUseInteractiveBrandColor:h=!1,validations:{min:w=5,max:L=3e3,remainingChar:T=100,errorMessage:z={}}={},brandName:V,signUpMessageBannerText:Q,usernameSignInDek:J,modalProps:X={},minimisedReviewNotesText:Z,hasReviewNotesFormSignIn:ee=!0,isMinimised:te=!0,reviewerInfoText:ne,signInURL:ie,userId:ae,handleUsernameChange:oe,onSubmitHandler:re,siteUserName:se,showSavedRecipeNotes:le,shouldEnableRatings:de,showMessageBannerHandler:ce})=>{i.useEffect((()=>{(async()=>{await m(),c("ReviewNotesForm")})()}),[]);const me={reviewNote:"",toggleChip:[],...de&&{rating:null}},ue=o(),[pe,ge]=l(me),[ye,he]=l({}),[fe,we]=l(""),[be,ve]=l(!0),[Re,Ce]=l(n),[Ie,Me]=l(!1),xe={reviewNote:[{test:e=>e.length>=w&&e.length<=L,error:"invalidReviewLength"}],rating:[{test:e=>e>=1,error:"requiredField"}]},[Ne,Ee]=i.useState(te),[Le,Te]=i.useState(!1),[$e,Se]=i.useState(!1),[ke,Ue]=l(!1);r((()=>{Te(!!ae)}),[ae]);const Ae=Z||ue.formatMessage(y.defaultcommunityReviewText),Fe=(e,t)=>{const n=xe[e];if(!n)return null;for(const i of n)if(!i.test(t))return he((t=>({...t,[e]:i.error}))),i.error;return he((t=>{const{[e]:n,...i}=t;return i})),null},Be=e=>t=>{let n;switch(e){case"reviewNote":n=t.target.value.trim(),(e=>{e.length>=L?we(ue.formatMessage(y.maxCharLimitMet).replace("_MAX_",L)):L-e.length<=T?we(ue.formatMessage(y.remainingMaxCharLimit).replace("_COUNT_",L-e.length).replace("_MAX_",L)):we("")})(n);break;case"toggleChip":n=(e=>{const t=Re.map((t=>t.slug===e?{...t,active:!t.active}:t));return Ce((e=>(((e,t)=>{const n=e.filter((e=>e.active)),i=[];if(!1===t[0].active&&!0===e[0].active||!1===t[1].active&&!0===e[1].active){const e=n.map((e=>e.slug.toLowerCase())),t=1===n.length?n[0].description:"";if(1===n.length)i.push({name:e[0],index:0,total_index:1});else{if(!["tip","question"].every((t=>e.includes(t))))return;i.push({name:"tip",index:0,total_index:1},{name:"question",index:0,total_index:1})}G({type:"select",label:t,subject:"community_comment",features_list:i},{skipDuplicateEvent:!1})}})(t,e),t))),t})(t);break;default:n=t}ge({...pe,[e]:n}),"reviewNote"===e&&n.length<w||Fe(e,n)},De=()=>{G({type:"attempt",subject:"community_comment"},{skipDuplicateEvent:!1})},_e=s(null),Pe=s(null),He=i.useRef(null),qe=e=>{_e.current&&!_e.current.contains(e.target)&&ve(!0),Pe.current&&Pe.current.id!==e.target?.firstChild.id&&Se(!1)};Y(_e,(e=>qe(e))),Y(Pe,(e=>qe(e)));const{discardLabel:Oe="Yes, discard it"}=X,We=()=>{He.current.value="",Ce(n),ge({...me}),he({}),Ee(!0),Me(!1),we("")},je=ue.formatMessage(y.nonLoggedInErrorMessage),Ge=(e,t)=>{const n=e[t];if(!n)return"";return z[n]||ue.formatMessage(y[n],{min:w})},Ye=Ge(ye,"reviewNote"),Ke=fe.length>0;return i.createElement(v,{className:e,"data-testid":"ReviewNotesForm"},!Le&&!ae&&i.createElement(P,null,i.createElement(H,null,Q??ue.formatMessage(y.messageBannerText,{brandName:V})),i.createElement(j.Primary,{href:ie,inputKind:"link",label:ue.formatMessage(y.buttonLabel),btnStyle:"outlined",target:"_self",rel:"nofollow noreferrer",onClickHandler:e=>{const t={type:"login",label:e.target.innerText,subject:"community",placement:"interstitial",state:"focused",source_type:"COMMUNITY_LOGIN"};d(t)}})),Ne?i.createElement(K,{ariaLabel:Ae,onMinimise:(e,t)=>{e.preventDefault(),t&&Ee(!1),le(!1)},signInURL:ie,isSignedIn:Le,trackAddNoteEvent:De,handleUserSignInStatus:e=>{e.preventDefault(),$e||De(),Le||Se(!0)},hasReviewNotesFormSignIn:ee,handleUsernameChange:oe,siteUserName:se,usernameSignInDek:J},i.createElement(q,{name:"isMinimised",formName:"isMinimised",label:ue.formatMessage(y.textFieldLabel),placeholder:Ae,hasDynamicTextArea:!0,tabIndex:"-1","aria-hidden":!0,customHeightMultiplier:12,hideLabel:!0,isInvalid:$e,inputRef:Pe,isDisabled:$e}),$e&&i.createElement(D,null,je)):i.createElement(R,{hasError:!!Ye,hasWarning:Ke},i.createElement(W.MultiLine,{name:"reviewNoteText",placeholder:Ae,hideLabel:!0,label:ue.formatMessage(y.textFieldLabel),formName:"reviewNoteText",hasAutoFocus:!0,inputRef:He,errorText:Ye,onInputChange:Be("reviewNote"),max:L,errorPosition:"belowTextField",shouldDisableTypingAtMaxChar:!0,isDisabled:ke}),Ke&&i.createElement(D,null,fe),t&&i.createElement(i.Fragment,null,i.createElement(U,null,ue.formatMessage(y.reviewTagsLabel)),i.createElement(A,{shouldUseInteractiveBrandColor:h},i.createElement(g,null,Re.map((({slug:e,active:t,description:n})=>i.createElement(p,{key:e,isChecked:t,onChange:()=>Be("toggleChip")(e),shouldUrlRedirect:!1,isDisabled:ke},ue.formatMessage(y.reviewTags,{reviewTag:n}))))))),de&&i.createElement(N,null,i.createElement($,null,a??ue.formatMessage(y.reviewerRatingLabel)),i.createElement(E,{averageRatingCount:pe.rating,isRatingDisabled:!1,onChange:Be("rating"),shouldShowOutline:!1}),Object.keys(ye).length>0&&i.createElement(D,null,Ge(ye,"rating"))),i.createElement(C,null,i.createElement(I,null,ue.formatMessage(y.reviewerInfoFieldLabel)),i.createElement(M,null,se),i.createElement(x,{ref:_e},i.createElement(j.Utility,{isIconButton:!0,ButtonIcon:u,className:"review-note-user__info-button",onClickHandler:e=>(e=>{e.preventDefault(),ve(!be)})(e),inputKind:"button",role:"button",label:ue.formatMessage(y.reviewerInfoIconButtonLabel)}),!be&&i.createElement(S,null,i.createElement(b,null),i.createElement(k,null,ne??ue.formatMessage(y.reviewerFieldInfoIconText)))),i.createElement(O,null)),i.createElement(f,{confirmButtonCallback:()=>{We(),(()=>{{const e={type:"discard",label:Oe.toUpperCase(),subject:"community_comment"};G(e,{skipDuplicateEvent:!1})}})()},modalProps:X,onClose:()=>Me(!1),isVisible:Ie}),i.createElement(F,{"data-testid":"ReviewNotesFormActions"},i.createElement(_,{isDisabled:ke||Object.keys(ye).length>0,inputKind:"button",label:ue.formatMessage(y.addNoteLabel),onClickHandler:async()=>{Ue(!0);const e=(e=>Object.entries(e).reduce(((e,[t,n])=>{const i=Fe(t,n);return i&&(e[t]=i),e}),{}))(pe);if(0===Object.keys(e).length){const e={...pe,userId:ae};null!=await re(e)?(We(),le(!0)):ce&&ce(ue.formatMessage(y.AddNoteFailedToastMessage))}Ue(!1)}}),i.createElement(B,{isDisabled:ke,btnStyle:"text",inputKind:"link",type:"button",label:ue.formatMessage(y.cancelNoteLabel),onClickHandler:()=>{Object.values(pe).some((e=>(!Array.isArray(e)||0!==e.length)&&Boolean(e)))?Me(!0):(Ee(!0),he({}))}}))))};z.propTypes={brandName:a.string,className:a.string,handleUsernameChange:a.func,hasReviewNotesFormSignIn:a.bool,isMinimised:a.bool,minimisedReviewNotesText:a.string,modalProps:a.object,onSubmitHandler:a.func,reviewerInfoText:a.string,reviewerRatingLabel:a.string,reviewNoteTags:a.array,shouldEnableRatings:a.bool,shouldEnableTags:a.bool,shouldUseInteractiveBrandColor:a.bool,showMessageBannerHandler:a.func,showSavedRecipeNotes:a.func.isRequired,signInURL:a.string.isRequired,signUpMessageBannerText:a.string,siteUserName:a.string,userId:a.string,usernameSignInDek:a.string,validations:a.shape({min:a.number,max:a.number,remainingChar:a.number,errorMessage:a.shape({requiredField:a.string,invalidReviewLength:a.string})})},e.exports=z},45565:(e,t,n)=>{const{asConfiguredComponent:i}=n(12892),a=n(3890);e.exports=i(a,"ReviewNotesForm")},37887:(e,t,n)=>{const{css:i,default:a}=n(75999),{BaseText:o,BaseLink:r}=n(76955),{ButtonWrapper:s}=n(18974),{calculateSpacing:l,getColorStyles:d,getColorToken:c,getTypographyStyles:m,maxScreen:u,minScreen:p}=n(26865),{BREAKPOINTS:g}=n(96472),y=n(62340),{RatingStar:h}=n(97927),{TextFieldControlTextarea:f,TextFieldWrapper:w}=n(60434),b=n(89662),{ListWrapper:v}=n(14952),{ToggleButton:R}=n(18161),C=n(73730),{TextFieldErrorText:I}=n(60434),M=a(b.MultiLine).withConfig({displayName:"ReviewNoteTextField"})`
+  margin-bottom: 0;
+
+  textarea:disabled {
+    background-color: transparent;
+  }
+`,x=a.div.withConfig({displayName:"ReviewNoteFormWrapper"})``,N=a.div.withConfig({displayName:"ReviewNoteSectionContainer"})`
+  border: 1px solid;
+  ${({theme:e})=>d(e,"border-color","colors.interactive.base.light")};
+  padding: ${l(3)};
+  ${f} {
+    margin-top: 0;
+    padding: ${l(2)} ${l(1.5)};
+    ${({theme:e,hasError:t})=>d(e,"border-color",t?"colors.interactive.base.brand-secondary":"colors.interactive.base.black")};
+
+    &[disabled] {
+      ${({theme:e})=>d(e,"background","colors.interactive.base.white")};
+      ${({theme:e})=>d(e,"border-color","colors.interactive.base.light")};
+      ${({theme:e})=>d(e,"color","colors.consumption.body.standard.subhed")};
+    }
+
+    &::placeholder {
+      ${({theme:e})=>d(e,"color","colors.interactive.base.light")};
+    }
+  }
+  ${w} {
+    ${({hasWarning:e})=>e&&`margin-bottom: ${l(1)};`}
+  }
+`,E=a.div.withConfig({displayName:"ReviewNoteUserInfo"})`
+  margin-top: ${l(4)};
+  margin-bottom: ${l(4)};
+`,L=a.div.withConfig({displayName:"ReviewNoteRatingWrapper"})`
+  margin-top: ${l(1)};
+  margin-bottom: ${l(4)};
+`,T=a.span.withConfig({displayName:"ReviewerInfoLabel"})`
+  ${({theme:e})=>d(e,"color","colors.consumption.body.standard.body-deemphasized")};
+  ${({theme:e})=>m(e,"typography.definitions.globalEditorial.accreditation-core")};
+`,$=a.span.withConfig({displayName:"ReviewerRatingLabel"})`
+  ${({theme:e})=>d(e,"color","colors.consumption.body.standard.body")};
+  ${({theme:e})=>m(e,"typography.definitions.globalEditorial.accreditation-core")};
+`,S=a.span.withConfig({displayName:"ReviewerName"})`
+  ${({theme:e})=>d(e,"color","colors.consumption.body.standard.body")};
+  ${({theme:e})=>m(e,"typography.definitions.globalEditorial.accreditation-core")};
+  padding-left: ${l(.5)};
+`,k=a.span.withConfig({displayName:"ReviewTagsInfoLabel"})`
+  ${({theme:e})=>d(e,"color","colors.consumption.body.standard.body")};
+  ${({theme:e})=>m(e,"typography.definitions.globalEditorial.accreditation-core")};
+`,U=a.div.withConfig({displayName:"ReviewerInfoIconButtonWrapper"})`
+  display: inline;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    ${({theme:e})=>d(e,"fill","colors.consumption.lead.special.context-tertiary")};
+  }
+
+  .review-note-user__info-button {
+    float: inline-end;
+    margin: 0;
+    border: 0;
+    background-color: ${({theme:e})=>c(e,"colors.interactive.base.white")};
+    padding: 0;
+    padding-left: 12px;
+
+    &:hover,
+    &:focus {
+      border: 0;
+      background: none;
+    }
+  }
+`,A=a.div.withConfig({displayName:"ReviewNotesToggleChipListWrapper"})`
+  ${R} {
+    ${({theme:e})=>m(e,"typography.definitions.foundation.link-utility")}
+    ${({shouldUseInteractiveBrandColor:e})=>e?i`
+            &[aria-checked='false'] {
+              background-color: rgba(
+                ${c("colors.interactive.social.primary-hover",{rgbOnly:!0})},
+                0.1
+              );
+            }
+          `:`&[aria-checked='false'] {\n          ${d("color","colors.interactive.base.black")}\n      }`}
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:hover {
+      box-shadow: 0 0 0 1px ${c("colors.interactive.base.black")}
+        inset;
+    }
+
+    ${u(g.md)} {
+      &:focus,
+      &:hover {
+        box-shadow: none;
+      }
+    }
+
+    &:disabled {
+      box-shadow: none;
+    }
+  }
+  ${v} {
+    padding-bottom: 8px;
+    padding-left: 0;
+  }
+`,F=a(o).withConfig({displayName:"ReveiwerInfoText"})`
+  position: absolute;
+  left: calc(25% - 10px);
+  float: inline-end;
+  z-index: -1;
+  border-radius: 8px;
+  box-shadow: 0 0 20px 12px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 17px 22px;
+  width: 80%;
+  box-sizing: border-box;
+
+  ${({theme:e})=>d(e,"color","colors.interactive.base.dark")};
+  ${({theme:e})=>m(e,"typography.definitions.utility.input-core")};
+
+  ${p(g.sm)} {
+    padding: 12px 13px;
+  }
+  ${p(g.md)} {
+    padding: 17px 22px;
+  }
+`,B=a.div.withConfig({displayName:"AlertArrow"})`
+  position: absolute;
+  top: auto;
+  bottom: 100%;
+  left: calc(98% - 11px);
+  border-width: 0 10px 13px;
+  border-style: solid;
+  border-color: rgb(254 254 254) transparent;
+`,D=a.div.withConfig({displayName:"ReviewerInfoAlertToolTip"})`
+  position: relative;
+  z-index: 2;
+  margin-top: 8px;
+  background-color: ${c("colors.background.white")};
+
+  ${p(g.sm)} {
+    ${F} {
+      left: calc(8% - 4px);
+      width: 100%;
+    }
+    ${B} {
+      left: calc(98% - 14px);
+      border-width: 0 8px 12px;
+    }
+  }
+
+  ${p(g.md)} {
+    ${F} {
+      left: calc(25% - 10px);
+      width: 80%;
+    }
+    ${B} {
+      left: calc(98% - 12px);
+      border-width: 0 10px 13px;
+    }
+  }
+
+  ${p(g.lg)} {
+    ${F} {
+      left: calc(7% - 10px);
+      width: 100%;
+    }
+    ${B} {
+      left: calc(98% - 14px);
+      border-width: 0 10px 13px;
+    }
+  }
+
+  ${p(g.xl)} {
+    ${F} {
+      left: calc(25% - 10px);
+      width: 80%;
+    }
+    ${B} {
+      left: calc(98% - 11px);
+      border-width: 0 10px 13px;
+    }
+  }
+
+  ${p(g.xxl)} {
+    ${F} {
+      left: calc(34% - 10px);
+      width: 70%;
+    }
+    ${B} {
+      left: calc(98% - 8px);
+      border-width: 0 10px 13px;
+    }
+  }
+`,_=a(y).withConfig({displayName:"RatingFormRating"})`
+  align-items: start;
+  padding: ${l()} 0 ${l()};
+  ${h} {
+    transform: scale(1.78);
+    margin: 0 ${l(1.25)};
+  }
+`,P=a.div.withConfig({displayName:"ReviewNotesFormActions"})`
+  ${p(g.lg)} {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 32px;
+  }
+  ${u(g.md)} {
+    display: flex;
+    flex-direction: column;
+  }
+`,H=a.div.withConfig({displayName:"ReviewNotesDivider"})`
+  margin-top: ${l(2)};
+  border-bottom: 1px solid;
+  ${d("border-color","colors.consumption.body.standard.divider")};
+`,q=a(C.Primary).withConfig({displayName:"ReviewFormSubmitButton"})`
+  ${m("typography.definitions.utility.button-core")}
+  ${({theme:e})=>d(e,"color","colors.interactive.base.brand-primary")};
+  margin-top: 0.5rem;
+  margin-bottom: 20px;
+  padding: 15px 9px;
+  width: 100%;
+  max-width: 100%;
+  text-decoration: underline;
+`,O=a(C.Primary).withConfig({displayName:"ReviewFormSubmitButton"})`
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 20px;
+  padding: 15px 9px;
+  width: 100%;
+  max-width: 100%;
+  height: unset;
+  text-align: center;
+
+  &:active::before {
+    top: 0;
+    left: 0;
+  }
+`,W=a(I).withConfig({displayName:"ReviewFormTextFieldErrorText"})``,j=a(r).withConfig({displayName:"ReviewNotesFormSignin"})``,G=a.div.withConfig({displayName:"ReviewNotesFormMinimised"})`
+  position: relative;
+
+  input.text-field__control {
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    textarea.text-field__control {
+      padding: ${l(2)};
+    }
+  }
+  @media (min-width: 768px) {
+    textarea.text-field__control {
+      padding: ${l(2)} ${l(3)};
+    }
+  }
+
+  textarea.text-field__control {
+    cursor: pointer;
+    overflow: auto;
+    overflow-y: hidden;
+
+    &::placeholder {
+      ${({theme:e})=>d(e,"color","colors.interactive.base.light")};
+    }
+  }
+
+  ${j} {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    color: transparent;
+  }
+`,Y=a.div.withConfig({displayName:"ReviewNotesSignInMessageBanner"})`
+  margin-bottom: ${l(3)};
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: ${l(3)};
+  text-align: -webkit-center;
+
+  ${d("border-color","colors.consumption.body.standard.divider")};
+
+  ${s} {
+    margin-top: ${l(2)};
+  }
+`,K=a(o).withConfig({displayName:"MessageBannerText"})`
+  ${d("color","colors.consumption.lead.standard.heading")};
+  ${m("typography.definitions.consumptionEditorial.description-feature")}
+`;e.exports={AlertArrow:B,ReviewNoteFormWrapper:x,ReviewNoteSectionContainer:N,ReviewNoteUserInfo:E,ReviewerInfoLabel:T,ReviewerName:S,ReviewerInfoIconButtonWrapper:U,ReviewNoteRatingWrapper:L,RatingFormRating:_,ReviewerRatingLabel:$,ReviewNotesFormSignin:j,ReviewNotesFormMinimised:G,ReviewerInfoAlertToolTip:D,ReveiwerInfoText:F,ReviewTagsInfoLabel:k,ReviewNotesToggleChipListWrapper:A,ReviewNotesFormActions:P,ReviewNotesFormCancelButton:q,ReviewNotesFormSubmitButton:O,ReviewNotesFormTextFieldErrorText:W,ReviewNotesSignInMessageBanner:Y,MessageBannerText:K,ReviewNoteTextField:M,ReviewNotesDivider:H}},39321:(e,t,n)=>{const i=n(37243);t.A=(0,i.defineMessages)({defaultcommunityReviewText:{id:"ReviewNotesForm.defaultcommunityReviewText",defaultMessage:"Ask a question or leave a helpful tip, suggestion or opinion that is relevant and respectful for the community.",description:"Appears when the form is minimised or maximised and enableCommunityExperience is true"},nonLoggedInErrorMessage:{id:"ReviewForm.nonLoggedInErrorMessage",defaultMessage:"Sign in or create an account to add note.",description:"Message to display non logged in users"},textFieldLabel:{id:"ReviewNotesForm.textFieldLabel",defaultMessage:"Your Review",description:"The label for the main review text field"},addNoteLabel:{id:"ReviewNotesForm.addNoteLabel",defaultMessage:"Add Note",description:"The label for Add Note submit button"},cancelNoteLabel:{id:"ReviewNotesForm.cancelNoteLabel",defaultMessage:"Discard",description:"The label for cancel button"},reviewerInfoFieldLabel:{id:"ReviewNotesForm.ReviewerInfoFieldLabel",defaultMessage:"Adding Note As:",description:"The label for the reviewer name field"},reviewerRatingLabel:{id:"ReviewNotesForm.ReviewerRatingLabel",defaultMessage:"Rate this",description:"The label for the reviewer rating field"},reviewerFieldInfoIconText:{id:"ReviewNotesForm.reviewerFieldInfoIconText",defaultMessage:"Your username appears next to your comments and replies. Change it anytime in your Account.",description:"information text for user to change their user name"},reviewerInfoIconButtonLabel:{id:"ReviewNotesForm.reviewerInfoIconButtonLabel",defaultMessage:"user name update message",description:"Label for reviewer user name update message icon"},reviewTagsLabel:{id:"ReviewNotesForm.reviewTagsLabel",defaultMessage:"TAG YOUR NOTE (OPTIONAL)",description:"Label for adding tags"},reviewTags:{id:"FilterComponent.reviewTags",defaultMessage:"{reviewTag}",description:"Value for the tag"},invalidReviewLength:{id:"ReviewNotesForm.invalidReviewNoteLength",defaultMessage:"Enter {min} characters or more to add a note.",description:"Error message for invalid review note length"},requiredField:{id:"ReviewNotesForm.requiredField",defaultMessage:"Select a star rating to add a note",description:"Error message for required field"},maxCharLimitMet:{id:"ReviewNotesForm.maxCharLimitMet",defaultMessage:"_MAX_ character limit met",description:"Warning message for max review note length"},remainingMaxCharLimit:{id:"ReviewNotesForm.remainingMaxCharLimit",defaultMessage:"_COUNT_ of _MAX_ character limit remaining",description:"Warning message for invalid review note length"},messageBannerText:{id:"ReviewNotesForm.messageBannerText",defaultMessage:"Join the {brandName} community to add comments.",description:"Text for the MessageBanner body"},buttonLabel:{id:"ReviewNotesForm.buttonLabel",defaultMessage:"Sign in or create account",description:"Text for the sign in or create account button"},AddNoteFailedToastMessage:{id:"ReviewNotes.AddNoteFailedToastMessage",defaultMessage:"Unable to add your note. Please try again.",description:"Failure message to show on note save"}})},32844:(e,t,n)=>{const i=n(96540),a=n(5556),{useIntl:o}=n(37243),{useState:r,useEffect:s}=n(96540),{commentingAction:l}=n(85554),{ReviewReplyLabel:d,ReviewReplyWrapper:c,ReviewReplyMetaDataWrapper:m}=n(16631),u=n(71001),p=n(22509),{ReplyUserName:g,ReplyDataInfo:y,ReplyCommentsListWrapper:h,ReplyCommentItem:f,ReplyMetaData:w,ReplierUserName:b,ReplyLikeCount:v,ReplyTimeStamp:R,ReplyInfoLabel:C,ReplyText:I,ReplyReactionButton:M,ShowOrHideRepliesLabel:x,ShowOrHideRepliesLabelRule:N}=n(10959),{Comment:E,Like:L,LikeFilled:T}=n(24695),{Dot:$}=n(91470),{getRepliesByCommentId:S}=n(60711),{formatReviewDateAgo:k}=n(39311),{UserAuthenticationClient:U}=n(20656),A=n(53788).default,{oidcCookies:F}=A,B=n(61057),{trackContentEngagementEvent:D,trackUserAccountEvent:_}=n(14307),P=n(20777).A,H=({commentingUrl:e,replies:t,replyPageInfo:n,username:a,reviewModalProps:A,commentReactionHandler:H,user:q,signInHed:O,usernameSignInDek:W,signInHedSpanTag:j,signInMessage:G,commentId:Y,replyLimit:K,recipeId:z,showMessageBannerHandler:V,userReactions:Q,updateUserReactions:J,siteUserName:X,handleUsernameChange:Z,shouldEnableReply:ee,shouldEnableUpvotes:te})=>{const{formatMessage:ne}=o(),[ie,ae]=r(null),[oe,re]=r(!1),[se,le]=r([]),[de,ce]=r(!1),[me,ue]=r(n.hasNextPage??!1),[pe,ge]=r(n.hasNextPage?ne(P.ShowMoreRepliesLabel):""),[ye,he]=r(!1),[fe,we]=r(!1),[be,ve]=r(n.endCursor),[Re,Ce]=r(n.hasNextPage??!1),[Ie,Me]=r([]);s((()=>{ye?ge(ne(P.LoadingRepliesLabel)):me&&ge(ne(P.ShowMoreRepliesLabel))}),[ye,me,ne]);const xe=t=>{const n=((e,t,n)=>e?e.map((e=>{const{id:i,body:a,createdAt:o,siteUsername:r,parent:s,actionCounts:l,viewerActionPresence:d,revision:c}=e;return{replyId:i,replyText:a,replyDate:k(o,t),replyAuthorName:r?.[0]?.name,parentAuthorName:(()=>{let e=n;return"Anonymous"===n?e=n:s?.siteUsername?.[0]?.name&&(e=s?.siteUsername?.[0]?.name),e})(),reactionCount:l?.reaction?.total||0,viewerActionPresence:d,revisionId:c?.id}})):[])(t,ne,a);return n.map((t=>{const{replyId:n,replyAuthorName:a,replyDate:o,replyText:r,parentAuthorName:s,revisionId:h}=t||{},x={commentId:n,revisionId:h};return i.createElement(f,{key:n},i.createElement(y,null,a&&i.createElement(b,null,a)),i.createElement(y,null,i.createElement(w,null,i.createElement(C,null,ne(P.ReviewReplyLabel)),s&&i.createElement(g,null,s),i.createElement($,null),o&&i.createElement(R,null,o))),r&&i.createElement(I,{dangerouslySetInnerHTML:{__html:r}}),i.createElement(m,null,i.createElement(y,null,te&&i.createElement(M,{isIconButton:!0,name:"reply-reaction",label:"Reaction",onClickHandler:()=>(e=>{if(!q?.isAuthenticated){const e="COMMUNITY_LIKE_CLICK_REPLY",t={type:"login",source_type:e},n=`${document.location.pathname}#${l.LIKE_REPLY}`;return void p.doDisplayModal({dangerousDek:G,dangerousHed:O,dangerousHedSpanTag:j,redirectURL:n,shouldHideIllustration:!0,snowplowData:t,source:e})}H({item:e});const t={type:Q[e.commentId]?.viewerActionPresence?"unlike":"like",subject:"community_reply",items:[{content_id:e.commentId}]};D(t,{skipDuplicateEvent:!1})})(x),ButtonIcon:Q[n]?.viewerActionPresence?T:L}),te&&i.createElement(v,null,Q[n]?.reactionCount||0),ee&&i.createElement(c,{onClick:e=>((e,t)=>{if(e.preventDefault(),q?.isAuthenticated)X?(ae(t?.replyAuthorName),le((e=>[...e,t?.replyId])),re(!0)):(B.doDisplayModal({dangerousDek:W,successCallback:e=>{Z(e),ae(t?.replyAuthorName),le((e=>[...e,t?.replyId])),re(!0)},source:"community_reply"}),_({type:"impression",subject:"username_modal",label:"Create Username",source_type:"community_reply"}));else{const e="COMMUNITY_REPLY_TO_REPLY",t={subject:"community_reply",label:"Reply",source_type:e,type:"login"},n=`${document.location.pathname}#${l.REPLY_TO_REPLY}`;p.doDisplayModal({dangerousDek:G,dangerousHed:O,dangerousHedSpanTag:j,redirectURL:n,shouldHideIllustration:!0,source:e,snowplowData:t})}D({type:"attempt",subject:"community_reply",label:"reply",items:[{content_id:t?.replyId}]},{skipDuplicateEvent:!1})})(e,t)},i.createElement(E,null),i.createElement(d,null,ne(P.ReviewReplyCommentLabel))))),oe&&se.includes(n)&&q?.isAuthenticated&&X&&i.createElement(u,{commentId:n,username:ie,recipeId:z,revisionId:h,commentingUrl:e,closeReply:()=>{re(!1)},reviewModalProps:A,showMessageBannerHandler:V,source:"community_reply"}))}))};return i.createElement(h,null,xe(t),!fe&&xe(Ie),i.createElement(y,null,me&&i.createElement(x,{onClick:async()=>{let t;if(we(!1),Ie.length>=1&&!Re)Me([...Ie]),ce(!0),ue(!1);else{he(!0);const i=be??n.endCursor;try{const t=U.getCookieValue(F.id),{replies:n,page:{endCursor:a,hasNextPage:o}}=await S(Y,i,e,console,t,K);ve(a),Ce(o),o||ce(!0),ue(o),Me([...Ie,...n]),J(n)}catch(e){t=e?.message||"",console.warn(e)}he(!1)}D({type:"show_more",label:"Show more replies",subject:"community_reply",error:t},{skipDuplicateEvent:!1})}},i.createElement(N,null),pe),de&&i.createElement(x,{onClick:()=>{ce(!1),we(!0),ue(!0)}},i.createElement(N,null),ne(P.HideRepliesLabel))))};H.propTypes={commentId:a.string,commentingUrl:a.string.isRequired,commentReactionHandler:a.func,handleUsernameChange:a.func,recipeId:a.string,replies:a.array,replyLimit:a.number,replyPageInfo:a.object,reviewModalProps:a.object,shouldEnableReply:a.bool,shouldEnableUpvotes:a.bool,showMessageBannerHandler:a.func,signInHed:a.string,signInHedSpanTag:a.string,signInMessage:a.string,siteUserName:a.string,updateUserReactions:a.func,user:a.shape({isAuthenticated:a.bool.isRequired,amguuid:a.string}).isRequired,username:a.string,usernameSignInDek:a.string,userReactions:a.objectOf(a.shape({reactionCount:a.number.isRequired,viewerActionPresence:a.bool.isRequired}).isRequired)},e.exports=H},10959:(e,t,n)=>{const i=n(75999).default,{getColorStyles:a,getTypographyStyles:o,maxScreen:r,calculateSpacing:s}=n(26865),{ReviewListMetaInfo:l,ReviewerUserName:d,ReviewLikeCount:c,ReviewListTimeStamp:m,ReviewReplyLabel:u,ReviewText:p,ReviewListReactionButton:g}=n(16631),{BREAKPOINTS:y}=n(96472),{BaseText:h}=n(76955),f=i(h).withConfig({displayName:"ReplyUserName"})`
+  ${({theme:e})=>a(e,"color","colors.interactive.base.dark")};
+  ${({theme:e})=>o(e,"typography.definitions.globalEditorial.accreditation-feature")};
+`,w=i(l).withConfig({displayName:"ReplyDataInfo"})`
+  &:first-child {
+    margin-bottom: ${s(1)};
+  }
+
+  margin-left: ${s(8)};
+
+  ${r(y.md)} {
+    margin-left: ${s(6)};
+  }
+`,b=i(d).withConfig({displayName:"ReplierUserName"})``,v=i.div.withConfig({displayName:"ReplyMetaData"})`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`,R=i.div.withConfig({displayName:"ReplyCommentsListWrapper"})`
+  margin-top: ${s(1.25)};
+`,C=i.div.withConfig({displayName:"ReplyCommentItem"})`
+  margin-top: ${s(4)};
+
+  &:first-child {
+    margin-top: ${s(2)};
+  }
+`,I=i(c).withConfig({displayName:"ReplyLikeCount"})``,M=i(m).withConfig({displayName:"ReplyTimeStamp"})`
+  ${({theme:e})=>o(e,"typography.definitions.foundation.meta-secondary")}
+`,x=i(u).withConfig({displayName:"ReplyInfoLabel"})`
+  ${({theme:e})=>o(e,"typography.definitions.foundation.meta-secondary")};
+`,N=i(p).withConfig({displayName:"ReplyText"})`
+  margin-left: ${s(8)};
+
+  ${r(y.md)} {
+    margin-left: ${s(6)};
+  }
+`,E=i(g).withConfig({displayName:"ReplyReactionButton"})``,L=i.div.withConfig({displayName:"ShowOrHideRepliesLabel"})`
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+
+  ${({theme:e})=>o(e,"typography.definitions.foundation.link-secondary")};
+
+  ${({theme:e})=>a(e,"color","colors.interactive.base.dark")};
+`,T=i.hr.withConfig({displayName:"ShowOrHideRepliesLabelRule"})`
+  ${({theme:e})=>a(e,"color","colors.discovery.body.dark.divider")};
+  align-self: center;
+  margin-right: ${s(1)};
+  width: ${s(4)};
+`;e.exports={ReplyUserName:f,ReplyDataInfo:w,ReplyCommentsListWrapper:R,ReplyCommentItem:C,ReplyMetaData:v,ReplierUserName:b,ReplyLikeCount:I,ReplyTimeStamp:M,ReplyInfoLabel:x,ReplyText:N,ReplyReactionButton:E,ShowOrHideRepliesLabel:L,ShowOrHideRepliesLabelRule:T}},20777:(e,t,n)=>{const i=n(37243);t.A=(0,i.defineMessages)({ReviewReplyLabel:{id:"ReviewReplyComment.ReviewReplyLabel",defaultMessage:"Replying to",description:"The label for the reply note field"},ShowMoreRepliesLabel:{id:"ReviewReplyComment.ShowMoreRepliesLabel",defaultMessage:"Show more replies",description:"The label to show more replies"},ReviewReplyCommentLabel:{id:"ReviewReplyComment.ReviewReplyCommentLabel",defaultMessage:"Reply",description:"The label to show reply icon"},HideRepliesLabel:{id:"ReviewReplyComment.HideRepliesLabel",defaultMessage:"Hide replies",description:"The label to hide replies"},LoadingRepliesLabel:{id:"ReviewReplyComment.LoadingRepliesLabel",defaultMessage:"Loading…",description:"The label to hide replies"}})},71001:(e,t,n)=>{const i=n(96540),a=n(5556),{useState:o,useRef:r}=n(96540),{useIntl:s}=n(37243),l=n(76833).A,{addReply:d}=n(60711),{ReviewReplyUsername:c,ReviewReplyNoteWrapper:m,ReviewReplyLabel:u,ReviewReplyCancelLink:p,ReviewReplyNoteInfo:g,ReviewReplyButton:y,ReviewReplyButtonWrapper:h,ReviewReplyMultilineTextField:f}=n(73559),w=n(45771),{trackContentEngagementEvent:b}=n(14307),v=3e3,R=({commentId:e,username:t,recipeId:n,revisionId:a,commentingUrl:R,closeReply:C,reviewModalProps:I,showMessageBannerHandler:M,source:x})=>{const{formatMessage:N}=s(),[E,L]=o(!0),[T,$]=o(0),[S,k]=o(!1),U=r(null),[A,F]=o(!1),B=e=>{const t={type:"discard",label:"YES, DISCARD IT",subject:x};e.preventDefault(),C(),b(t,{skipDuplicateEvent:!1})};return i.createElement(m,null,i.createElement(g,null,i.createElement(u,null,N(l.ReviewReplyLabel)),i.createElement(c,null,t)),i.createElement(f,{name:"reviewReplyNoteText",formName:"reviewReplyNoteText",placeholder:N(l.ReplyFieldPlaceHolder),hasAutoFocus:!0,onInputChange:e=>{const t=e.target.value;$(t.length),e.target.value=t,L(0===t.trim().length),k(!1)},customHeightMultiplier:10,label:N(l.ReplyTextFieldLabel),hideLabel:!0,errorPosition:"belowTextField",errorText:S?N(l.ReviewFieldMinLimitErrorText):T>2900&&T<v?N(l.ReviewFieldAlertLimitErrorText).replace("_CHARACTER_LIMIT_CURRENT_",v-T).replace("_CHARACTER_LIMIT_",v):T===v?N(l.ReviewFieldMaxLimitErrorText).replace("_CHARACTER_LIMIT_",v):"",inputRef:U,max:v,charCountHandler:e=>{$(e)},shouldDisableTypingAtMaxChar:!0}),i.createElement(w,{modalProps:I,confirmButtonCallback:e=>B(e),onClose:()=>F(!1),isVisible:A}),i.createElement(h,null,i.createElement(y,{inputKind:"submit",isDisabled:E,label:N(l.ReplyButtonLabel),onClickHandler:async t=>{let i;t.preventDefault();const o=U.current?.value?.trim();if(o.length<2)k(!0),L(!0);else if(o.length>0){const t={storyID:n,parentID:e,parentRevisionID:a,body:o,clientMutationId:"0"};try{await d(R,t)?(C(),M(N(l.AddReplySuccessToastMessage))):M(N(l.AddReplyFailedToastMessage))}catch(e){i=e?.message||"",console.error("Error while posting reply:",e),M(N(l.AddReplyFailedToastMessage))}b({type:"submit",label:"Reply",subject:"community_reply",error:i},{skipDuplicateEvent:!1})}}}),i.createElement(p,{btnStyle:"text",label:N(l.CancelButtonLabel),onClickHandler:e=>{U.current&&U.current.value.trim().length>0?F(!0):B(e),U.current.focus()}})))};R.propTypes={closeReply:a.func,commentId:a.string,commentingUrl:a.string,recipeId:a.string,reviewModalProps:a.object,revisionId:a.string,showMessageBannerHandler:a.func,source:a.string,username:a.string},e.exports=R},73559:(e,t,n)=>{const i=n(75999).default,{getColorStyles:a,getColorToken:o,getTypographyStyles:r,maxScreen:s,minScreen:l,calculateSpacing:d}=n(26865),c=n(73730),{BaseText:m}=n(76955),{BREAKPOINTS:u}=n(96472),p=n(89662),g=i(m).withConfig({displayName:"ReviewReplyUsername"})`
+  ${({theme:e})=>a(e,"color","colors.consumption.body.standard.body")};
+  ${({theme:e})=>r(e,"typography.definitions.globalEditorial.accreditation-core")};
+  padding-left: ${d(.5)};
+`,y=i.div.withConfig({displayName:"ReviewReplyNoteWrapper"})`
+  border: 1px solid ${o("colors.foundation.menu.dividers")};
+  padding: ${d(3)};
+  gap: ${d(1.5)};
+  ${s(u.md)} {
+    margin-top: ${d(1.25)};
+  }
+`,h=i(c.Primary).withConfig({displayName:"ReviewReplyCancelLink"})`
+  margin-top: ${d(1.25)};
+  width: 100%;
+  ${r("typography.definitions.utility.button-core")}
+  text-decoration: underline;
+  ${({theme:e})=>a(e,"color","colors.interactive.base.brand-primary")};
+`,f=i(p.MultiLine).withConfig({displayName:"ReviewReplyMultilineTextField"})`
+  ${r("typography.definitions.utility.input-core")}
+  ${({theme:e})=>a(e,"color","colors.interactive.base.light")};
+`,w=i.span.withConfig({displayName:"ReviewReplyLabel"})`
+  ${({theme:e})=>a(e,"color","colors.consumption.body.standard.body-deemphasized")};
+  ${({theme:e})=>r(e,"typography.definitions.globalEditorial.accreditation-core")};
+`,b=i.div.withConfig({displayName:"ReviewReplyNoteInfo"})`
+  display: flex;
+`,v=i(c.Primary).withConfig({displayName:"ReviewReplyButton"})`
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 20px;
+  padding: 15px 9px;
+  width: 100%;
+  max-width: 100%;
+  height: unset;
+  text-align: center;
+
+  &:active::before {
+    top: 0;
+    left: 0;
+  }
+`,R=i.div.withConfig({displayName:"ReviewReplyButtonWrapper"})`
+  ${l(u.lg)} {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 32px;
+  }
+  ${s(u.md)} {
+    display: flex;
+    flex-direction: column;
+  }
+`;e.exports={ReviewReplyUsername:g,ReviewReplyNoteWrapper:y,ReviewReplyCancelLink:h,ReviewReplyLabel:w,ReviewReplyNoteInfo:b,ReviewReplyButton:v,ReviewReplyButtonWrapper:R,ReviewReplyMultilineTextField:f}},76833:(e,t,n)=>{const i=n(37243);t.A=(0,i.defineMessages)({ReviewReplyLabel:{id:"ReviewReplyNote.ReviewReplyLabel",defaultMessage:"Replying To:",description:"The label for the reply note field"},ReplyFieldPlaceHolder:{id:"ReviewReplyNote.ReplyFieldPlaceHolder",defaultMessage:"Add your reply here ",description:"The placeholder for the reply note text field"},ReplyButtonLabel:{id:"ReviewReplyNote.ReplyButtonLabel",defaultMessage:"Reply",description:"The label for the reply button"},CancelButtonLabel:{id:"ReviewReplyNote.CancelButtonLabel",defaultMessage:"Discard",description:"The label for the cancel button"},ReplyTextFieldLabel:{id:"ReviewReplyNote.ReplyTextFieldLabel",defaultMessage:"Your Reply",description:"The label for the reply text field"},AddReplySuccessToastMessage:{id:"ReviewReplyNote.AddReplySuccessToastMessage",defaultMessage:"Reply added",description:"Success message to show on reply save"},AddReplyFailedToastMessage:{id:"ReviewReplyNote.AddReplyFailedToastMessage",defaultMessage:"Unable to add your reply. Please try again.",description:"Failure message to show on reply save"},ReviewFieldAlertLimitErrorText:{id:"ReviewReplyNote.ReviewFieldAlertLimitErrorText",defaultMessage:"_CHARACTER_LIMIT_CURRENT_ of _CHARACTER_LIMIT_ character limit remaining.",description:"The error message for the review field alert limit"},ReviewFieldMaxLimitErrorText:{id:"ReviewReplyNote.ReviewFieldMaxLimitErrorText",defaultMessage:"_CHARACTER_LIMIT_ character limit met.",description:"The error message for the review field max limit"},ReviewFieldMinLimitErrorText:{id:"ReviewReplyNote.ReviewFieldMinLimitErrorText",defaultMessage:"Enter 2 characters or more to add a reply.",description:"The error message for the review field min limit"}})},19023:(e,t,n)=>{const i=n(96540),a=n(5556),{useState:o,useEffect:r}=n(96540),s=n(24465),{createUserComment:l}=n(22914),{requestGraphService:d}=n(60711),c=({recipeId:e,hed:t,commentingUrl:n,organizationId:a,tenantID:c,...m})=>{const[u,p]=o(),[g,y]=o(),[h,f]=o(),[w,b]=o(),[v,R]=o("");return r((()=>{const e=window.location.origin+window.location.pathname;R(e)}),[]),i.createElement(s,{...m,externalValidationErrors:g,onSubmitHandler:async i=>{p(!0),y(),f(),b();const{userId:o,reviewText:r,isAnonymous:s,location:m,reviewerInfo:u,willPrepareAgain:g}=i,h={willPrepareAgain:g,location:m,displayName:u,hed:t,storyLink:v},w={review:{storyID:e,siteID:a,body:r,isAnonymous:s,meta:JSON.stringify(h),tenantID:c},clientMutationId:"0"},R={operationName:"addReview",query:l,variables:{input:w,coralUserID:o}};try{await d(n,R),b(!0)}catch(e){console.warn(e),f(e.message)}},isSubmitting:u,error:h,hasSucceeded:w})};c.propTypes={commentingUrl:a.string,hed:a.string,organizationId:a.string,recipeId:a.string.isRequired,tenantID:a.string},e.exports=c},39311:(e,t,n)=>{const{fetchWithTimeout:i}=n(57743),{getFromNowDateFormat:a}=n(5697),o=e=>e instanceof Date&&!isNaN(e),r=(e,t)=>{const n=new Date(e);return o(n)?a({date:n,formatMessage:t,includeHourAndMin:!1}):e},s=e=>{const t=new Date(e);return o(t)?t.toLocaleDateString("en-US"):e},l={yield:"Yield",totalTime:"Total Time"};e.exports={fetchUserRecipeRating:async(e,t)=>{if(!t)return null;let n;try{n=await i(`/api/recipe/${e}/review-ratings/${t}?verso=true`,{method:"GET"},5e3)}catch(e){return console.error(e),null}if(200===n.status){const{reviews:e,error:t}=await n.json();if(t)console.error(t);else if(e&&e.length>0){const t=e.filter((e=>Object.hasOwnProperty.call(e,"rating"))).sort(((e,t)=>{const n=new Date(e.updatedAt);return new Date(t.updatedAt)-n}));return t[0]?.rating||null}}return null},formatReviewListItemDate:s,formatReviewListItems:(e,t,n,i=!1)=>e?e.map(((e,a)=>{const{revisionId:o,viewerActionPresence:l,reactionCount:d,replyPageInfo:c,replies:m}=e,u={id:a,revisionId:o,commentId:e._id,viewerActionPresence:l,reactionCount:d,replyPageInfo:c,replies:m};e.reviewText&&(u.text=e.reviewText),e.location&&(u.location=e.location);const p=e.isAnonymous?"Anonymous":e.siteUsername||e.reviewerInfo;return p&&(u.username=p),e.rating&&(u.rating=e.rating),e.recipeId&&(u.recipeId=e.recipeId),e.updatedAt&&(u.date=i?r(e.updatedAt,t):s(e.updatedAt)),e.tags&&(u.tags=((e,t)=>e.reduce(((e,n)=>{const i=t.find((e=>e.slug===n));return i&&e.push(i.label),e}),[]))(e.tags,n)),u})):[],formatInfoSliceItems:(e,t,n)=>{if(!e)return[];const i=[];return Object.keys(e).forEach((a=>{e[a]&&e[a].length&&l[a]&&i.push({key:n[l[a]]?t(n[l[a]]):l[a],value:e[a]})})),i},formatReviewDateAgo:r}},22914:e=>{e.exports={createCommentReaction:"\n  mutation CreateCommentReaction($input: CreateCommentReactionInput!) {\n    createCommentReaction(input: $input) {\n      clientMutationId\n      comment {\n        id\n      }\n    }\n  }\n",createReply:"\n  mutation Mutation($input: CreateCommentReplyInput!) {\n    createCommentReply(input: $input) {\n      clientMutationId\n      edge {\n        cursor\n        node {\n          body\n          id\n          depth\n          parentCount\n          replyCount\n          replies {\n            nodes {\n              depth\n              id\n              replyCount\n            }\n          }\n        }\n      }\n    }\n  }\n",createUserComment:"\n  mutation AddReview($input: AddReviewInput!, $coralUserID: ID!) {\n    addReview(input: $input, coralUserID: $coralUserID) {\n      message\n    }\n  }\n",Comments:"\n  query Comments(\n    $after: Cursor\n    $commentLimit: Int = 10\n    $commentsOrderBy: COMMENT_SORT\n    $repliesOrderBy: COMMENT_SORT\n    $replyLimit: Int = 1\n    $storyId: ID!\n    $showPrimaryComments: Boolean\n  ) {\n    coralcomments(\n      first: $commentLimit\n      after: $after\n      storyID: $storyId\n      orderBy: $commentsOrderBy\n      showPrimaryComments: $showPrimaryComments\n    ) {\n      pageInfo {\n        hasNextPage\n        hasPreviousPage\n        startCursor\n        endCursor\n      }\n      nodes {\n        id\n        body\n        isAnonymous\n        meta\n        createdAt\n        rating\n        siteUsername {\n          name\n        }\n        revision {\n          id\n        }\n        reviewTags {\n          code\n        }\n        revisionHistory {\n          id\n        }\n        viewerActionPresence {\n          reaction\n        }\n        actionCounts {\n          reaction {\n            total\n          }\n        }\n        replies(orderBy: $repliesOrderBy, flatten: true, first: $replyLimit) {\n          pageInfo {\n            hasNextPage\n            endCursor\n          }\n          nodes {\n            depth\n            id\n            body\n            createdAt\n            siteUsername {\n              name\n            }\n            revision {\n              id\n            }\n            viewerActionPresence {\n              reaction\n            }\n            actionCounts {\n              reaction {\n                total\n              }\n            }\n            parent {\n              siteUsername {\n                name\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n",checkStory:"\n  query Story($id: ID!) {\n    story(id: $id) {\n      id\n    }\n  }\n",addStory:"\n  mutation createStory($inp: CreateStoryInput!) {\n    createStory(input: $inp) {\n      story {\n        id\n      }\n    }\n  }\n",addUserRating:"\n  mutation addReview($inp: AddReviewInput!, $coralUserID: ID!) {\n    addReview(input: $inp, coralUserID: $coralUserID) {\n      message\n    }\n  }\n",Ratings:"\n  query storyRating($storyId: String, $ratingScale: Int) {\n    storyRating(storyId: $storyId, ratingScale: $ratingScale) {\n      average\n      count\n    }\n  }\n",ratingByUser:"\n  query coralreviews($siteID: String!, $storyID: String!, $userID: String!) {\n    coralreviews(siteID: $siteID, storyID: $storyID, userID: $userID) {\n      rating {\n        rating\n        siteID\n        storyID\n        authorID\n      }\n      comment {\n        body\n      }\n    }\n  }\n",removeCommentReaction:"\n  mutation RemoveCommentReaction($input: RemoveCommentReactionInput!) {\n    removeCommentReaction(input: $input) {\n      clientMutationId\n      comment {\n        id\n      }\n    }\n  }\n",repliesByCommentId:"\n  query CommentById(\n    $replyLimit: Int = 10\n    $after: Cursor\n    $orderBy: COMMENT_SORT\n    $commentId: ID!\n  ) {\n    coralcomment(id: $commentId) {\n      id\n      replies(\n        first: $replyLimit\n        after: $after\n        orderBy: $orderBy\n        flatten: true\n      ) {\n        pageInfo {\n          hasNextPage\n          endCursor\n        }\n        nodes {\n          id\n          body\n          createdAt\n          siteUsername {\n            name\n          }\n          revision {\n            id\n          }\n          viewerActionPresence {\n            reaction\n          }\n          actionCounts {\n            reaction {\n              total\n            }\n          }\n          parent {\n            siteUsername {\n              name\n            }\n          }\n        }\n      }\n    }\n  }\n",storyCommentsCount:"\n  query Story($id: ID!) {\n    story(id: $id) {\n      totalPrimaryCommentsCount\n    }\n  }\n"}},60711:(e,t,n)=>{Object.defineProperty(t,"__esModule",{value:!0}),t.validateAndAddStory=t.getDataReviews=t.addReview=t.addReply=t.addDataStory=t.storyExists=t.getStoryCommentsCount=t.getRepliesByCommentId=t.getComments=t.requestGraphService=void 0;const i=n(22914),{GraphQLClient:a}=n(96497),{getCookie:o}=n(56892),r=n(53788).default,{oidcCookies:s}=r;t.requestGraphService=(e,t,n="")=>{const i=o(s.access)||n,r=new a(e),{query:l,variables:d}=t,c={"Access-Control-Request-Method":"POST","Access-Control-Request-Headers":"Content-Type","Content-Type":"application/json","User-Agent":"verso-client",Authorization:`Bearer ${i}`};return r.request(l,d,c)},t.getComments=async({entityId:e,after:n,commentingUrl:a,logger:o,defaultSort:r,reviewLimit:s,accessToken:l,replyLimit:d=1})=>{const c=r.commentsOrderBy||"CREATED_AT_ASC",m=r.repliesOrderBy||"CREATED_AT_DESC",u=s||15,p={operationName:"Comments",query:i.Comments,variables:{commentLimit:u,replyLimit:d,after:n,storyId:e,commentsOrderBy:c,repliesOrderBy:m,showPrimaryComments:!0}};try{const n=await(0,t.requestGraphService)(a,p,l),{pageInfo:{hasNextPage:i=!1,endCursor:o=null}={},nodes:r=[]}=n?.coralcomments??{},s=r?.map((t=>{const{isAnonymous:n,body:i,createdAt:a,id:o,meta:r,rating:s,revision:l,viewerActionPresence:d,actionCounts:c,replies:m,reviewTags:u,siteUsername:p}=t,{location:g,reviewerInfo:y,willPrepareAgain:h}=(e=>{if(!e)return{willPrepareAgain:!0,location:"No location",reviewerInfo:"ANONYMOUS"};try{const t=JSON.parse(e),{location:n,displayName:i,willPrepareAgain:a}=t;return{willPrepareAgain:a,location:n,reviewerInfo:i}}catch(e){return{willPrepareAgain:"",location:"",reviewerInfo:""}}})(r),f=l?.id||null,w=u?.map((e=>e.code))||[],b=c?.reaction?.total??0;return{isAnonymous:n,location:g,recipeId:e,reviewText:i,reviewerInfo:y,willPrepareAgain:h,createdAt:a,updatedAt:a,rating:s,_id:o,revisionId:f,viewerActionPresence:d?.reaction??!1,reactionCount:b,replies:m?.nodes,replyPageInfo:m?.pageInfo,siteUsername:p?.[0]?.name,tags:w}}));return{recipeId:e,reviews:s,reviewsCount:s.length,page:{hasNextPage:i,endCursor:o},average:0,ratingsCount:0}}catch(t){return o.warn(`Error making GQL request in getComments: ${t.message}`),{recipeId:e,reviews:[],reviewsCount:0,page:{hasNextPage:!1,endCursor:""},average:0,ratingsCount:0}}},t.getRepliesByCommentId=async(e,n,a,o,r,s=10)=>{const l=s||10,d={operationName:"CommentById",query:i.repliesByCommentId,variables:{replyLimit:l,after:n,orderBy:"CREATED_AT_DESC",commentId:e}};try{const n=await(0,t.requestGraphService)(a,d,r),{pageInfo:{hasNextPage:i=!1,endCursor:o=null}={},nodes:s=[]}=n?.coralcomment?.replies??{};return{commentId:e,replies:s,page:{hasNextPage:i,endCursor:o}}}catch(t){return o.warn(`Error making GQL request in getRepliesByCommentId: ${t.message}`),{commentId:e,replies:[],page:{hasNextPage:!1,endCursor:""}}}},t.getStoryCommentsCount=async(e,n,a)=>{const o={operationName:"Story",query:i.storyCommentsCount,variables:{id:e}};let r=null;try{const e=await(0,t.requestGraphService)(n,o),{totalPrimaryCommentsCount:i=null}=e?.story||"";r=i}catch(e){a.warn(`Error making GQL request in storyCommentsCount: ${e.message}`)}return r},t.storyExists=async(e,n,a)=>{const o={operationName:"Story",query:i.checkStory,variables:{id:e}};let r;try{r=await(0,t.requestGraphService)(n,o)}catch(e){a.warn(`Error making GQL request in storyExists: ${e.message}`)}return r},t.addDataStory=async(e,n,a,o,r)=>{const s={clientMutationId:"0",story:{id:e,siteID:n,metadata:a}},l={operationName:"createStory",query:i.addStory,variables:{inp:s}};let d=null;try{d=await(0,t.requestGraphService)(o,l)}catch(e){r.warn(`Error making GQL request in addDataStory: ${e.message}`)}return d},t.addReply=async(e,n)=>{const a={operationName:"createReply",query:i.createReply,variables:{input:n}};let o;try{o=await(0,t.requestGraphService)(e,a)}catch(e){throw console.warn(e),new Error(e)}return o},t.addReview=async(e,n,a,o)=>{const r={operationName:"addReview",query:i.createUserComment,variables:{input:e,coralUserID:n}};let s=null;try{s=await(0,t.requestGraphService)(a,r)}catch(e){throw o.warn(`Error making GQL request in addReview: ${e.message}`),new Error(e)}return s},t.getDataReviews=async({entityId:e,commentingUrl:n,logger:a,reviewLimit:o,accessToken:r,defaultSort:s,replyLimit:l})=>{let d,c={reviews:[],page:{hasNextPage:!1,endCursor:""}},m=0,u=0;if(!n)return a.warn(`Could not fetch reviews since the URL is not configured “${e}”`),{...c,average:m,ratingsCount:u,storyCommentsCount:d};try{const p={operationName:"storyRating",query:i.Ratings,variables:{storyId:e,ratingScale:5}},g=(0,t.requestGraphService)(n,p),y=(0,t.getStoryCommentsCount)(e,n,a),h=(0,t.getComments)({entityId:e,after:null,commentingUrl:n,logger:a,reviewLimit:o,accessToken:r,defaultSort:s,replyLimit:l});let f;if([f,d,c]=await Promise.all([g,y,h]),f){const{average:e,count:t}=f.storyRating;m=e,u=t}}catch(i){200===i?.response?.status&&(c=await(0,t.getComments)({entityId:e,after:null,commentingUrl:n,logger:a,reviewLimit:o,accessToken:r,defaultSort:s}))}return{...c,average:m,ratingsCount:u,storyCommentsCount:d}},t.validateAndAddStory=async({entityId:e,commentingUrl:n,organizationId:i,metadata:a,workflowContext:o})=>{let r=null;try{if(n)try{const s=await(0,t.storyExists)(e,n,o.logger);s&&s.story||(r=await(0,t.addDataStory)(e,i,a,n,o.logger))}catch(e){o.logger.warn(e)}else o.logger.warn(`Could not validateAndAddStory for “${e} since URL was not configured”`)}catch(t){o.logger.warn(`Could not validateAndAddStory for “${e}”`,t)}return r}},76497:e=>{e.exports={getUsername:"\n  query getSiteUsername($authorID: String!, $siteID: String) {\n    siteUsername(authorID: $authorID, siteID: $siteID) {\n      id\n      name\n      tenantID\n      authorID\n    }\n  }\n",createUsername:"\n  mutation createUsername($input: CreateSiteUsernameInput!) {\n    createSiteUsername(input: $input) {\n      siteUsername {\n        name\n        siteID\n      }\n    }\n  }\n",updateUsername:"\n  mutation updateSiteUsername($input: UpdateSiteUsernameInput!) {\n    updateSiteUsername(input: $input) {\n      siteUsername {\n        name\n        siteID\n      }\n    }\n  }\n"}},67116:(e,t,n)=>{Object.defineProperty(t,"__esModule",{value:!0}),t.validate=t.createNewUsername=t.checkUsername=t.requestGraphService=void 0;const i=n(76497),a=n(16075),{GraphQLClient:o}=n(96497),{getCookie:r}=n(56892),s=n(53788).default,{oidcCookies:l}=s;t.requestGraphService=(e,t)=>{const n=r(l.access),i=new o(e),{query:a,variables:s}=t,d={"Access-Control-Request-Method":"POST","Access-Control-Request-Headers":"Content-Type","Content-Type":"application/json","User-Agent":"verso-client",Authorization:`Bearer ${n}`};return i.request(a,s,d)},t.checkUsername=async(e,n,a)=>{if(!a)return void console.error("A commenting url is required to check the username");const o={operationName:"getSiteUsername",query:i.getUsername,variables:{authorID:e,siteID:n}};let r;try{const e=await(0,t.requestGraphService)(a,o);r=0===e?.siteUsername?.length?null:e&&e.siteUsername[0]?.name}catch(e){console.log(`Error making GQL request in checkUsername: ${e.message}`)}return r},t.createNewUsername=async(e,n)=>{const{name:a,organizationId:o,userId:r,url:s,action:l}=e,d={siteUsername:{name:a,siteID:o,authorID:r},clientMutationId:"0"},c={operationName:"UPDATE"===l?"updateSiteUsername":"createSiteUsername",query:"UPDATE"===l?i.updateUsername:i.createUsername,variables:{input:d}};try{const e=await(0,t.requestGraphService)(s,c);return e&&e["UPDATE"===l?"updateSiteUsername":"createSiteUsername"]?.siteUsername?.name}catch(e){let t;throw(null===e.response?.data&&"InternalDevelopmentError: user or username already exists"===e.response?.errors[0]?.message||"InternalDevelopmentError: Duplicate Brand Username"===e.response?.errors[0]?.message)&&(t="already_taken"),n.warn(`Error making GQL request in createNewUsername: ${e?.response?.errors[0]?.message}`),new Error(t)}},t.validate=(e,t)=>{const{minLength:n,maxLength:i}=t,o=a.string().min(n).max(i).required(),r=a.string().regex(/^[a-zA-Z0-9_]+$/).required();return o.validate(e).error?"lengthError":r.validate(e).error?"specialCharError":null}}}]);
