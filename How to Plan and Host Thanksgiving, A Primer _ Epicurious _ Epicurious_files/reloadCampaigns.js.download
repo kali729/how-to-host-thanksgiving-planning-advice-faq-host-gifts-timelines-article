@@ -1,0 +1,72 @@
+//<script>
+bouncex.tryCatch(function reloadCampaigns(){
+	var newCampaigns = false;
+	bouncex.creatives = false;
+	bouncex.brandStyles = false;
+	bouncex.webfonts = false;
+
+	if (bouncex.gbi) {
+		bouncex.gbi.stacks = false;
+	}
+
+	var newCookie = {"swv":false,"did":"4308866947518352192","vid":1732050821787759,"v":{"logged_in":false,"submitted_onsite":false,"ever_logged_in":false,"submitted_email_wellequipped":false,"submitted_email_cocktail":false,"submitted_email_seasonal":false,"submitted_email_cook90":false,"submitted_email_smallplates":false,"submitted_email_topten":false,"submitted_email_daily":false,"submitted_email_vegetarian":false,"submitted_email_quick":false,"ccpa_cali":true,"reg_gate_submitted":false},"fvt":1731998943,"ao":1,"lp":"https%3A%2F%2Fwww.epicurious.com%2F","as":0,"vpv":5,"d":"d","r":"","cvt":1732050821,"sid":15,"gcr":80,"m":0,"lvt":1732051187,"campaigns":{"1595596":{"lvt":1731998978,"lavid":1,"la":1731998976,"fsa":1731998976,"as":1,"ao":1,"oa":[]},"2447210":{"lvt":1731998934,"lavid":1,"la":1731998934,"fsa":1731998934,"as":1,"ao":1,"oa":[1731998934],"io":1},"2447215":{"lvt":1731998978,"lavid":1}}};
+	var campaignAdded = false;
+	for (var campaignId in newCampaigns) {
+		if (newCampaigns.hasOwnProperty(campaignId)) {
+			// if campaign cookie does not exist
+			if (!bouncex.cookie.campaigns) {
+				bouncex.cookie.campaigns = {};
+			} else {
+				bouncex.cookie.campaigns = Object.assign({}, bouncex.cookie.campaigns);
+			}
+
+			if (!bouncex.cookie.campaigns[campaignId]) {
+				campaignAdded = true;
+				bouncex.cookie.campaigns[campaignId] = {lvt:bouncex.cookie.lvt, vv:0};
+			} else if (newCookie.campaigns[campaignId]) {
+				// need to set campaign cookie's activations_sessions to the new cookie as it gets modified in reloadCampaigns
+				campaignAdded = true;
+				bouncex.cookie.campaigns[campaignId].as = newCookie.campaigns[campaignId].as;
+			}
+		}
+	}
+	if (campaignAdded) {
+		bouncex.setBounceCookie();
+	}
+
+	for (var campaignId in bouncex.campaigns) {
+		if (bouncex.campaigns.hasOwnProperty(campaignId)) { //copy state vars
+			if (newCampaigns[campaignId]) {
+				newCampaigns[campaignId].ap = bouncex.campaigns[campaignId].ap;
+				newCampaigns[campaignId].repressed = Boolean(bouncex.campaigns[campaignId].repressed);
+			}
+
+			if (newCampaigns[campaignId] &&
+				bouncex.campaigns[campaignId].ad_visible &&
+				newCampaigns[campaignId].html.replace(/fsa=(\d+)&|width=(\d+)&|height=(\d+)&/gi,'') == bouncex.campaigns[campaignId].html.replace(/fsa=(\d+)&|width=(\d+)&|height=(\d+)&/gi,'')) {
+								newCampaigns[campaignId] = bouncex.campaigns[campaignId];
+			} else if (newCampaigns[campaignId] && bouncex.isGbi2Campaign(campaignId) && bouncex.campaigns[campaignId].gbi.hasBegunAuction) {
+								newCampaigns[campaignId] = bouncex.campaigns[campaignId];
+			} else {
+				bouncex.destroy_ad(campaignId);
+			}
+		}
+	}
+
+	bouncex.campaigns = newCampaigns;
+	newCampaigns = {};
+
+	bouncex.debug = false;
+		bouncex.setBounceCookie();
+	if (bouncex.campaigns) {
+		for (var campaignId in bouncex.campaigns) {
+			if (bouncex.campaigns[campaignId].ad_visible && typeof bouncex.repressCampaigns === 'function') {
+				bouncex.repressCampaigns(campaignId);
+			}
+		}
+		bouncex.loadBounceCss(bouncex.initActivationFuncs);
+	}
+		bouncex.loadBrandStyles();
+	bouncex.loadWebfonts();
+
+	})();
